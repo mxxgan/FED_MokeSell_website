@@ -1,4 +1,4 @@
-# FED-assignment-3
+# FED-assignment-2
 
 WRITEUP:
 The purpose of this application is designed to provide a seamless and engaging platform for users to buy and sell second-hand or new goods. The primary goal is to enable users to declutter their homes while earning money and to offer buyers a trustworthy marketplace to find what they need. By fostering trust through features such as reviews, ratings, and chat, the platform ensures a secure and interactive experience for both buyers and sellers.
