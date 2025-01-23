@@ -1,1 +1,8 @@
 # FED-assignment-3
+
+WRITEUP:
+The purpose of this application is designed to provide a seamless and engaging platform for users to buy and sell second-hand or new goods. The primary goal is to enable users to declutter their homes while earning money and to offer buyers a trustworthy marketplace to find what they need. By fostering trust through features such as reviews, ratings, and chat, the platform ensures a secure and interactive experience for both buyers and sellers.
+
+We used a mixture of red and hints of blue as there is a combination of warmth and coolness. In the website, it would look very playful and welcoming, perfect and versatile for this ecommerce app. Our main goal is to encourage users of all age to use this platform to declutter their homes while being able to earn money from doing this. The strengths of this website is that it provides a comprehensive user experience as features such as reviews, ratings and chat builds a stronger trust between buyers and sellers. Category browsing also makes it easier for users to search for certain specific products they intend to buy. Moreover, the layout ensures intuitive navigation and usability across all devices. Typography and color schemes are carefully chosen for readability and aesthetics purposes. 
+
+This eCommerce platform caters to users of all ages, providing an engaging, trustworthy, and feature-rich experience for buying and selling items. With intuitive design, innovative features like loyalty rewards, and interactive elements, this platform sets itself apart from competitors by creating value for both buyers and sellers.
