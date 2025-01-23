@@ -24,3 +24,6 @@ User Ratings and Reviews: Display user ratings and reviews to build trust within
 We will be using API for the review system, chat feature and the creation of user accounts with RestDB. We plan to use Lottie animation for loading, sales popup and when users add to cart. We will use html, css and javascript for the creation of the website. 
 
 This eCommerce platform caters to users of all ages, providing an engaging, trustworthy, and feature-rich experience for buying and selling items. With intuitive design, innovative features like loyalty rewards, and interactive elements, this platform sets itself apart from competitors by creating value for both buyers and sellers.
+
+
+figma link: https://www.figma.com/design/RLmXhHjlPDIzHlioKJzMEk/FED-assignment?node-id=0-1&t=tdG9CcDzksyxLKQU-1 
