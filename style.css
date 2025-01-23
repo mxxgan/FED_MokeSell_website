@@ -1,0 +1,34 @@
+.navigation-bar-1
+{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a8dadc;
+  padding: 10px 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+  }
+
+.nav-bar-2
+{
+    display: flex;
+  justify-content: center;
+  background-color: #457b9d;
+  padding: 10px 0;
+}
+
+.nav-bar-3
+{
+    display: flex;
+  justify-content: center;
+  background-color: #a8dadc;
+  padding: 10px 0;
+}
+
+.nav-bar-3 a:hover {
+    text-decoration: underline;
+  }
