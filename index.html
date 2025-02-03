@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="navigation-bar-1">
-        <marquee>| 20% off your first purchase over $70 only from 12JAN - 20JAN | Start the year clean and right | Purchase trending items at 10% this New Years!</marquee>
+        <marquee>| 20% off your first purchase over $70 only from 12JAN - 20JAN | Start the year clean and right | Purchase trending items at 10% this New Years! |
+            Beware of Pokemon Preorder Scams! | MokeBIZ - a guide to growing your biz-ness with us |
+        </marquee>
     </div>
-    <div class="nav-bar-2">
-        <div class="logo">MokeSell</div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search on MokeSell...">
-          <button><img src="" alt="Search"></button>
+
+        <div id="scroll-progress"></div>
+        <div class="nav-bar-2">
+            <div class="logo">MokeSell</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search on MokeSell...">
+                <button><img src="" alt="Search"></button>
+            </div>
+                <button><img src="" alt="Cart"></button>
+                <button><img src="" alt="Chat"></button>
+                <button class="sell-button">SELL</button>
+                <button>Sign Up</button>
         </div>
-        <div class="actions">
-          <button><img src="" alt="Cart"></button>
-          <button><img src="" alt="Chat"></button>
-          <button class="sell-button">SELL</button>
-          <button>Sign Up</button>
-          <button>Log In</button>
-        </div>
-      </div>
     <div class="nav-bar-3">
         <a href="#">Hobbies & Toys</a>
         <a href="#">Collections</a>
@@ -39,7 +41,8 @@
 
 
 
-      <div id="scroll-progress"></div>
+
+      
 
 <!-- copied from my website and havent changed anything yet -->
       <footer class="footer">
@@ -65,6 +68,14 @@
     </footer>
 
     <script src="script.js"></script>
+
+
+    <script>
+        window.onscroll = function() {
+        let scrolled = (document.documentElement.scrollTop || document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+        document.getElementById('scroll-progress').style.width = scrolled + '%';
+        }
+    </script>
 
 </body>
 </html>

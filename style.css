@@ -1,34 +1,69 @@
+
+
 .navigation-bar-1
 {
     display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8dadc;
+  background-color: #bfeff0;
   padding: 10px 20px;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    margin: 5px 0;
   }
 
-.nav-bar-2
-{
+
+.nav-bar-2 {
     display: flex;
-  justify-content: center;
-  background-color: #457b9d;
-  padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #457b9d;
+    padding: 10px 20px;
+}
+
+.search-bar, .sell-button, .logo {
+    display: inline-block;
 }
 
 .nav-bar-3
 {
     display: flex;
   justify-content: center;
-  background-color: #a8dadc;
+  background-color: #bfeff0;
   padding: 10px 0;
+  width: 100%; /* nav bar to fill up the full length */
+}
+
+.nav-bar-3 a {
+    margin-right: 6px; /* Add space between each category */
+    text-decoration: none; /* Remove underline by default */
+    padding: 5px; /* Optional: Adds some padding for better clickable area */
+    text-align: center;
 }
 
 .nav-bar-3 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline only when hovered */
+}
+
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.third-section {
+    background-color: #e0e0e0;
+    padding: 20px;
   }
+
+  .navigation-bar-1,
+.nav-bar-2,
+.nav-bar-3 {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+}
