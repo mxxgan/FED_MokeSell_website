@@ -42,6 +42,7 @@
     text-decoration: none; 
     padding: 5px; 
     text-align: center;
+    color:black;
 }
 
 .nav-bar-3 a:hover {
@@ -132,17 +133,19 @@
 
 .profile-section {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+    padding: 20px;
 }
 
 .profile-container {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #fff; /* Optional, for background */
+    gap: 30px;
+    width: 60%;
+    flex-wrap: wrap;
 }
-
 
 .profile-image {
     width: 150px;
@@ -161,11 +164,23 @@
 .profile-details {
     text-align: center;
     flex-grow: 1;
+    align-items: center; 
 }
 
 .profile-details h2 {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.username {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.username h2 {
+    margin: 0;
+    font-size: 2.2rem;
     font-weight: bold;
 }
 
@@ -179,9 +194,47 @@
 .profile-info .reviews,
 .profile-info .followers {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .profile-info {
+        flex-direction: column; /* Stack reviews & followers */
+    }
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1faee
+    ;
+    padding: 10px 0;
+    width: 100%; /* nav bar to fill up the full length */
+    flex-wrap: wrap;
+}
+
+.info a {
+    margin-right: 6px; 
+    text-decoration: none; 
+    padding: 5px; 
+    text-align: center;
+    color:black;
+}
+
+.info a:hover {
+    text-decoration: underline; 
+}
 
 
 /* footer */
