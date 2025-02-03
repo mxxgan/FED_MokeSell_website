@@ -73,6 +73,7 @@
     display: flex;
     justify-content: space-between; /* Distribute the space evenly */
     gap: 20px; 
+    margin: 30px auto;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 30px;
@@ -83,12 +84,25 @@
 
 .box {
     flex: 1; /* Makes both boxes equal width */
-    background-color: #a8dadc; /* Example color */
+    background-color: #a8dadc; 
     padding: 100px;
     border-radius: 20px; /* Rounded corners */
     text-align: center;
     box-sizing: border-box;
 }
+
+.advertisement {
+    margin: 30px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
 
 .for-you {
     display: flex; 
@@ -109,10 +123,63 @@
     line-height: 100px;
     margin-right: 10px;
 }
-.scroll-container::-webkit-scrollbar {
+/* .scroll-container::-webkit-scrollbar {
     display: none; /* Hides the scrollbar in Webkit browsers (Chrome, Safari) */
+ */
+
+
+/* profile page */
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Optional, for background */
+}
+
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.profile-info {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info .reviews,
+.profile-info .followers {
+    text-align: center;
+}
 
 
 
