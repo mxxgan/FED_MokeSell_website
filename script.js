@@ -4,6 +4,7 @@ window.onscroll = function() {
 }
 
 
+// chat page 
 let currentChat = "";
 
 // Function to open a chat
@@ -27,3 +28,75 @@ function sendMessage() {
 
     messageInput.value = ""; // Clear input field
 }
+
+
+// Login 
+// Function to Open Modal
+function openModal() {
+    document.getElementById("loginModal").style.display = "block";
+}
+
+// Function to Close Modal
+function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+// Function to Handle Login (Simple Alert Example)
+function submitLogin() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "admin" && password === "1234") {
+        alert("Welcome " + username + "!");
+        closeModal();
+    } else {
+        alert("Invalid username or password!");
+    }
+}
+// api
+const API_URL = "https://yourdb.restdb.io/rest/users"; // Replace with your RestDB collection
+    const API_KEY = "your-api-key"; // Replace with your RestDB API key
+
+    async function submitLogin() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        // Password must contain letters and numbers (at least 6 chars)
+        let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+        if (!passwordPattern.test(password)) {
+            alert("Password must contain at least one letter, one number, and be at least 6 characters long.");
+            return;
+        }
+
+        try {
+            // Fetch users from RestDB
+            let response = await fetch(`${API_URL}?q={"username": "${username}"}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-apikey": API_KEY
+                }
+            });
+
+            let users = await response.json();
+
+            if (users.length === 0) {
+                alert("User not found!");
+                return;
+            }
+
+            // Check if password matches
+            let user = users[0]; // Assume first match
+            if (user.password === password) { // ⚠️ Passwords should be hashed for security
+                alert("Login successful!");
+                closeModal();
+            } else {
+                alert("Incorrect password!");
+            }
+
+        } catch (error) {
+            console.error("Login error:", error);
+            alert("Error logging in. Please try again later.");
+        }
+    }
+
