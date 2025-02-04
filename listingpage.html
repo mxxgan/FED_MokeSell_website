@@ -30,6 +30,7 @@
         font-family: "Poppins", sans-serif;
         font-size: 16px; /* Adjust as needed */
     }
+    
 </style>
 
 <body>
@@ -99,34 +100,46 @@
         <a href="#">Settings</a>
       </section>
 
-      <section class = "cat1-info">
-        <h1>WOMENS FASHION</h1>
-        <div class="cat1">
-            <div class="item">
-                <img src="images/shirt1.jpeg" alt="Snoopy plush">
-            </div>
-            <div class="item">Item 2</div>
-            <div class="item">Item 3</div>x
-            <div class="item">Item 4</div>
-            <div class="item">Item 5</div>
-            <div class="item">Item 6</div>
+      <section class="photos">
+        <div class="box1 photos-box">+ ADD PHOTOS</div>
+
+        <div class="small-photos">
+            <div class="small-photos">
+                <div class="small-box">
+                    <select>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home & Living</option>
+                    </select>
+                </div>
+            
+        
+                <div class="small-box">
+                    <select>
+                        <option value="" disabled selected>Select Condition</option>
+                        <option value="new">New</option>
+                        <option value="used">Used</option>
+                        <option value="refurbished">Refurbished</option>
+                    </select>
+                </div>
+
+                <div class="small-box">
+                    <input type="number" id="price" placeholder="Indicate Price">
+                </div>
+
+                <div class="details-box">
+                    <textarea id="details" placeholder="Enter item details "></textarea>
+                </div>
+       
         </div>
-    </section>
-
-    <section class = "cat2-info">
-        <h1>HOBBIES AND TOYS</h1>
-        <div class="cat2">
-            <div class="item">Snoopy Plush</div>
-            <div class="item">Item 2</div>
-            <div class="item">Item 3</div>
-            <div class="item">Item 4</div>
-            <div class="item">Item 5</div>
-            <div class="item">Item 6</div>
-        </div>
-    </section>
+        <button class="list-now-btn">List Now!</button>
+      
+      </section>
+      
 
 
-    <script src="script.js"></script>
+      <script src="script.js"></script>
 
 </body>
 </html>
