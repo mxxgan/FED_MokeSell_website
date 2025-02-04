@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+    <!-- marquee banner -->
     <div class="marquee-container">
         <!-- Duplicate content for seamless effect -->
         <marquee class="marquee-content">
@@ -38,8 +38,34 @@
             <button><img src="" alt="Chat"></button>
             <button class="sell-button">SELL</button>
             <button>Sign Up</button>
-            <button>Log In</button>
+            <button class="login-button" onclick="openLogin()">Log In</button>
     </div>
+
+    <!-- Login modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <h2>Login</h2>
+            <div class="username-container">
+                <input type="text" id="username" placeholder="Phone Number/Email/Username">
+            </div>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password">
+                <button><img src="" alt="hide password"></button>
+            </div>
+            <button><h5>forgot password?</h5></button>
+
+            <button class="login-submit-button" onclick="submitLogin()">Login</button>
+            <h4>New User? <button>Sign In</h4></button>
+            <p>Or login with</p>
+
+            <div class="login-methods">
+                <button><img src="" alt="Google"></button>
+                <button><img src="" alt="Facebook"></button>
+            </div>
+        </div>
+    </div>
+
     <div class="nav-bar-3">
         <a href="#">Hobbies & Toys</a>
         <a href="#">Collections</a>
