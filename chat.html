@@ -67,7 +67,54 @@
         <a href="#">Video Gaming</a>
       </div>
 
+
+      <div class="chat-container">
+        <div class="chat-sidebar">
+            <h2>Chats</h2>
+            <div class="chat-list">
+                <div class="chat-item" onclick="openChat('user1')">
+                    <img src="images/download (5).jpeg" alt="User 1">
+                    <p>@tutterrtte</p>
+                </div>
+                <div class="chat-item" onclick="openChat('user2')">
+                    <img src="images/angry snoopy.jpeg" alt="User 2">
+                    <p>@snoopylver123</p>
+                </div>
+                <div class="chat-item" onclick="openChat('user3')">
+                    <img src="images/download (6).jpeg" alt="User 3">
+                    <p>@cheorrycoups</p>
+                </div>
+                <div class="chat-item" onclick="openChat('user1')">
+                    <img src="images/download (5).jpeg" alt="User 1">
+                    <p>@tutterrtte</p>
+                </div>
+                <div class="chat-item" onclick="openChat('user2')">
+                    <img src="images/angry snoopy.jpeg" alt="User 2">
+                    <p>@snoopylver123</p>
+                </div>
+                <div class="chat-item" onclick="openChat('user3')">
+                    <img src="images/download (6).jpeg" alt="User 3">
+                    <p>@cheorrycoups</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="chat-window">
+            <div class="chat-header">
+                <h2 id="chatUser">Select a chat</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <p class="default-message">Click on a user to start chatting.</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+      </div>
     
+      <script src="script.js"></script>
 
 
 </body>

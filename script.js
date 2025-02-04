@@ -4,6 +4,32 @@ window.onscroll = function() {
 }
 
 
+// chat page 
+let currentChat = "";
+
+// Function to open a chat
+function openChat(user) {
+    document.getElementById("chatUser").innerText = user;
+    document.getElementById("chatMessages").innerHTML = ""; // Clear previous messages
+    currentChat = user;
+}
+
+// Function to send a message
+function sendMessage() {
+    let messageInput = document.getElementById("messageInput");
+    let messageText = messageInput.value.trim();
+    let chatMessages = document.getElementById("chatMessages");
+
+    if (messageText === "" || currentChat === "") return;
+
+    let newMessage = document.createElement("p");
+    newMessage.innerText = "You: " + messageText;
+    chatMessages.appendChild(newMessage);
+
+    messageInput.value = ""; // Clear input field
+}
+
+
 // Login 
 // Function to Open Modal
 function openModal() {
@@ -86,3 +112,4 @@ const API_URL = "https://yourdb.restdb.io/rest/users"; // Replace with your Rest
             alert("Error logging in. Please try again later.");
         }
     }
+
