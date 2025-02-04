@@ -453,6 +453,209 @@ body {
     background-color: #45a049; /* Darker green on hover */
 }
 
+/* chat page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.chat-sidebar {
+    width: 25%;
+    background-color: #f1faee;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    
+}
+
+.chat-sidebar h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000000;
+}
+
+.chat-list {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;   /* Align items vertically */
+    gap: 10px;                /* Add some space between items */
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;                /* Space between image and text */
+    width: 100%;              /* Make each item take full width */
+    max-width: 200px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat-item:hover {
+    background-color: #ddd;
+}
+
+/* Chat User Image */
+.chat-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* RIGHT CHAT WINDOW */
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/* Chat Header */
+.chat-header {
+    padding: 15px;
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.default-message {
+    text-align: center;
+    color: gray;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Scrollbar Styling */
+.chat-sidebar, .chat-messages {
+    scrollbar-width: thin;
+    scrollbar-color: gray transparent;
+}
+
+.chat-sidebar::-webkit-scrollbar,
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-sidebar::-webkit-scrollbar-thumb,
+.chat-messages::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Chat Layout */
+.chat-container {
+    display: flex;
+    height: 100vh;  /* Full viewport height */
+}
+
+/* Left Sidebar */
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    width: 250px;  /* Set width for the sidebar */
+    background-color: #f1f1f1;
+    transition: width 0.3s ease;  /* Smooth transition for resizing */
+    max-width: 250px;  /* Prevent sidebar from exceeding width */
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.chat-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-item p {
+    margin: 0;
+    text-align: left;
+}
+
+/* Chat Window */
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 900px) {
+    /* Collapse the sidebar when screen width is smaller than 768px */
+    .chat-list {
+        width: 0;  
+        overflow: hidden;  /* Prevent content from showing */
+        padding: 0;  /* Remove padding when collapsed */
+    }
+
+    .chat-window {
+        flex: 1;  /* Chat window takes up the full space */
+    }
+}
+
+
 /* footer */
 footer {
     width: 100%;
