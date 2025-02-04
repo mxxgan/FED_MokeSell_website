@@ -45,15 +45,7 @@ body {
     white-space: nowrap;
     animation: marquee 10s linear infinite;
 }
-/* shifts text from 100% to -100% */
-/* @keyframes marquee {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-} */
+
 .marquee-content span {
     display: inline-block;
     padding-right: 0; /* Space between repeated text */
@@ -80,6 +72,124 @@ body {
 .search-bar, .sell-button, .logo {
     display: inline-block;
 }
+
+/* login pop up */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent Black Background */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: white;
+    width: 450px;
+    height: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.modal-content h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.password-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.modal-content h5 {
+    color: black;
+    position: absolute;
+    right: 10%;
+    top: 45%;	
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.modal-content h5:hover {
+    color: rgb(89, 110, 168);
+}
+.modal-content h4{
+    margin-top: 20px;
+    font-weight: normal;
+    color: black;
+}
+.modal-content h4 span{
+    font-weight: normal;
+    color: rgb(82, 110, 189);
+}
+.modal-content p {
+    font-size: 12px;
+}
+.login-methods {
+    display: flex;
+    flex-direction: row;
+}
+.login-methods button {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 5px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+.eye-icon img {
+    color: black;
+}
+
+.close-button {
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    color: black;
+    font-size: 30px;
+}
+
+.login-submit-button {
+    background: #86a3cd;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background: #218838;
+}
+
 
 .nav-bar-3
 {
@@ -115,7 +225,7 @@ body {
     padding: 20px;
   }
 
-  .navigation-bar-1,
+.marquee-container,
 .nav-bar-2,
 .nav-bar-3 {
     display: flex;

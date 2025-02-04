@@ -14,6 +14,19 @@ function openModal() {
 function closeModal() {
     document.getElementById("loginModal").style.display = "none";
 }
+// hide and unhide password
+function togglePassword() {
+    let passwordInput = document.getElementById("password");
+    let eyeIcon = document.getElementById("eyeIcon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.src = "eye-closed-icon.png"; // Change to closed eye PNG
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.src = "eye-open-icon.png"; // Change back to open eye PNG
+    }
+}
 
 // Function to Handle Login (Simple Alert Example)
 function submitLogin() {
