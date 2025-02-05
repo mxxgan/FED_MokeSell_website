@@ -186,10 +186,9 @@ body {
     border-radius: 5px;
 }
 
-.login-btn:hover {
-    background: #218838;
+.login-submit-button:hover {
+    background: #536d92;
 }
-
 
 .nav-bar-3
 {
@@ -337,7 +336,7 @@ body {
 
 .username h2 {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 3.4rem;
     font-weight: bold;
 }
 
@@ -447,17 +446,17 @@ body {
 /* listings page*/
 .photos {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     gap: 30px;
-    margin: 40px auto; /* Adds spacing above and below the boxes */
-    /* margin-left: 20px; */
+    margin: 40px 0;
     flex-wrap: wrap;
+    width: 100vw; 
 }
 
 .box1 {
     background-size: cover; 
     background-position:right; 
-    width: 300px;
+    width: 50%;
     height: 400px;
     border-radius: 15px;
     display: flex;
@@ -595,7 +594,7 @@ body {
     margin-top: 10px;
     flex-wrap: wrap;
     flex-direction: column;   /* Align items vertically */
-    gap: 10px;                /* Add some space between items */
+    gap: 10px;   
 }
 
 .chat-item {
@@ -717,6 +716,8 @@ body {
     background-color: #f1faee;
     transition: width 0.3s ease;  /* Smooth transition for resizing */
     max-width: 250px;  /* Prevent sidebar from exceeding width */
+    overflow-y: auto; 
+    max-height: 100vh;
 }
 
 .chat-item {
@@ -752,17 +753,15 @@ body {
     background-color: #ffffff;
 }
 
-/* Media Query for Small Screens */
 @media screen and (max-width: 900px) {
     /* Collapse the sidebar when screen width is smaller than 768px */
     .chat-list {
         width: 0;  
         overflow: hidden;  /* Prevent content from showing */
-        padding: 0;  /* Remove padding when collapsed */
     }
 
     .chat-window {
-        flex: 1;  /* Chat window takes up the full space */
+        flex: 1;  
     }
 }
 

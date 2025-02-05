@@ -2,33 +2,52 @@ window.onscroll = function() {
     let scrolled = (document.documentElement.scrollTop || document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
     document.getElementById('scroll-progress').style.width = scrolled + '%';
 }
+// megan added --------------------------------------------------------------------------------
+// // Only show profile button once signed in
+// function checkLoginStatus() {
+//     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
+//     if (isLoggedIn) {
+//         // hide login & sign-up buttons
+//         document.getElementById("signup-btn").style.display = "none";
+//         document.getElementById("login-btn").style.display = "none";
 
-// chat page 
-let currentChat = "";
+//         // show profile button
+//         document.getElementById("profile-btn").style.display = "inline-block";
+//     }
+// }
 
-// Function to open a chat
-function openChat(user) {
-    document.getElementById("chatUser").innerText = user;
-    document.getElementById("chatMessages").innerHTML = ""; // Clear previous messages
-    currentChat = user;
-}
+// // update navbar after logging in
+// function updateNavbar() {
+//     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-// Function to send a message
-function sendMessage() {
-    let messageInput = document.getElementById("messageInput");
-    let messageText = messageInput.value.trim();
-    let chatMessages = document.getElementById("chatMessages");
+//     if (isLoggedIn) {
+//         // Hide Sign Up and Login buttons
+//         document.getElementById("signup-btn").style.display = "none";
+//         document.getElementById("login-btn").style.display = "none";
 
-    if (messageText === "" || currentChat === "") return;
+//         // Show Profile button
+//         document.getElementById("profile-btn").style.display = "inline-block";
+//     }
+// }
 
-    let newMessage = document.createElement("p");
-    newMessage.innerText = "You: " + messageText;
-    chatMessages.appendChild(newMessage);
+// document.addEventListener("DOMContentLoaded", updateNavbar);
 
-    messageInput.value = ""; // Clear input field
-}
+// // Call on page load
+// checkLoginStatus();
 
+// // Simulated Login Function (Call this when the user logs in)
+// function loginUser() {
+//     localStorage.setItem("isLoggedIn", true);
+//     checkLoginStatus();
+// }
+
+// // Simulated Logout Function (Call this when the user logs out)
+// function logoutUser() {
+//     localStorage.removeItem("isLoggedIn");
+//     location.reload(); // Refresh to reset the navbar
+// }
+// ----------------------------------------------------------------------------
 
 // Login 
 // Function to Open Modal
@@ -61,11 +80,36 @@ function submitLogin() {
 
     if (username === "admin" && password === "1234") {
         alert("Welcome " + username + "!");
+
+        // Store login state in localStorage
+        localStorage.setItem("isLoggedIn", true);
+        localStorage.setItem("username", username); // Store username if needed
+
+        // Close the login modal
+        closeModal();
+
+        // Update the navbar
+        updateNavbar();
+
+        // Redirect to the home/profile page
+        window.location.href = "profile.html"; // Change to your desired page
+    } else {
+        alert("Invalid username or password!");
+    }
+}
+// gladys original submitlogin function ----------------------------------
+function submitLogin() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "admin" && password === "1234") {
+        alert("Welcome " + username + "!");
         closeModal();
     } else {
         alert("Invalid username or password!");
     }
 }
+// -----------------------------------------------------------------------------
 // api
 const API_URL = "https://yourdb.restdb.io/rest/users"; // Replace with your RestDB collection
     const API_KEY = "your-api-key"; // Replace with your RestDB API key
@@ -113,3 +157,27 @@ const API_URL = "https://yourdb.restdb.io/rest/users"; // Replace with your Rest
         }
     }
 
+// chat page 
+let currentChat = "";
+
+// Function to open a chat
+function openChat(user) {
+    document.getElementById("chatUser").innerText = user;
+    document.getElementById("chatMessages").innerHTML = ""; // Clear previous messages
+    currentChat = user;
+}
+
+// Function to send a message
+function sendMessage() {
+    let messageInput = document.getElementById("messageInput");
+    let messageText = messageInput.value.trim();
+    let chatMessages = document.getElementById("chatMessages");
+
+    if (messageText === "" || currentChat === "") return;
+
+    let newMessage = document.createElement("p");
+    newMessage.innerText = "You: " + messageText;
+    chatMessages.appendChild(newMessage);
+
+    messageInput.value = ""; // Clear input field
+}
