@@ -373,8 +373,7 @@ body {
 .info{
     display: flex;
     justify-content: space-between;
-    background-color: #f1faee
-    ;
+    background-color: #f1faee;
     padding: 10px 0;
     width: 100%; /* nav bar to fill up the full length */
     flex-wrap: wrap;
@@ -392,53 +391,99 @@ body {
     text-decoration: underline; 
 }
 
-.cat1 {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-    padding: 10px;
-}
-
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     margin-right: 20px;
     text-align: center;
     width: 200px;
-    height: 300px;
+    height: 430px;
     background-color: #f0f0f0;
     overflow: hidden;
     border-radius: 10px;
+    padding: 10px;
+}
+
+.item-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+    padding:0;
+    margin:0;
+    margin-top:2px;
+}
+
+.item-desc p {
+    margin: 2px 0; 
+    font-size: 0.9rem; 
+    line-height: 1;
+}
+
+.item-title {
+    font-family: "Fredoka", sans-serif !important;
+    font-style:oblique;
+    font-weight:600;
+    font-stretch: 100%;
+    font-size: 1.2rem !important;
+    line-height: 0.7 !important;
 }
 
 .item img {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 50%;
     object-fit: contain;
+    margin-top: 5px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
 }
 
-.cat2 {
+.cat {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
     width: 100%;
     padding: 10px;
+    margin-top: 10px;
     scrollbar-width: none; /* Hides scrollbar in Firefox */
-    -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer/Edge */
-}
-
-.cat2::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in Chrome, Safari */
+    /* -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer/Edge */
 }
 
 .item p {
     margin-top: 10px;
     font-size: 1rem;
     color: #333;
+}  
+
+.bump-button {
+    margin-top: auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #e63946 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+    width: 90%;
 }
+
+.bump-button:hover {
+    background-color: #0056b3;
+}
+
+.item {
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    border: 3px solid #f6d0d0;
+}
+
+
 
 
 
