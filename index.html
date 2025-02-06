@@ -34,14 +34,14 @@
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Search on MokeSell...">
-            <button><img src="" alt="Search"></button>
+            <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
         </div>
-        <button><img src="" alt="Cart"></button>
+        <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
         <a href="chat.html">
-            <button><img src="" alt="Chat"></button>
+            <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
         </a>
         <a href="listingpage.html">
-            <button><img src="" alt="SELL"></button>
+            <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
         </a>
         
         <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
@@ -58,11 +58,11 @@
             <button class="close-button" onclick="closeLoginModal()">×</button>
             <h2>Login</h2>
             <div class="username-container">
-                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="login-username" placeholder="Username">
             </div>
             <div class="password-container">
-                <input type="password" id="password" placeholder="Password">
-                <img src="images/eye-open-icon.png" class="eye-icon" id="eyeIcon" onclick="togglePassword()">
+                <input type="password" id="login-password" placeholder="Password">
+                <img src="images/eye-open-icon.png" class="login-eye-icon" id="eyeIcon" onclick="togglePassword('login-password', 'eyeIcon')" width="20px", height="auto">
             </div>
             <button><h5>forgot password?</h5></button>
 
@@ -71,8 +71,8 @@
             <p>Or login with</p>
 
             <div class="login-methods">
-                <button><img src="" alt="Google"></button>
-                <button><img src="" alt="Facebook"></button>
+                <button><img src="images/login-google.png" alt="Google"></button>
+                <button><img src="images/facebook.png" alt="Facebook"></button>
             </div>
         </div>
     </div>
@@ -92,11 +92,11 @@
                 <div class="password-container">
                     <div class="password-input">
                         <input type="password" id="acct_password" placeholder="Password">
-                        <img src="images/eye-open-icon.png" class="signUp-eye-icon" id="eyeIcon" onclick="togglePassword()" width="20px", height="auto">
+                        <img src="images/eye-open-icon.png" class="signUp-eye-icon" id="eyeIcon1" onclick="togglePassword('acct_password', 'eyeIcon1')" width="20px", height="auto">
                     </div>
                     <div class="password-confirm">
                         <input type="password" id="acct_confirm-password" placeholder="Confirm password">
-                        <img src="images/eye-open-icon.png" class="signUp-eye-icon-confirm" id="eyeIcon" onclick="togglePassword()" width="20px", height="auto">
+                        <img src="images/eye-open-icon.png" class="signUp-eye-icon-confirm" id="eyeIcon2" onclick="togglePassword('acct_confirmPassword', 'eyeIcon2')" width="20px", height="auto">
                     </div>
                 </div>
     
@@ -105,8 +105,8 @@
                 <p>Or Sign Up with</p>
     
                 <div class="signUp-methods">
-                    <button><img src="" alt="Google"></button>
-                    <button><img src="" alt="Facebook"></button>
+                    <button><img src="images/signUp-google.png" alt="Google"></button>
+                    <button><img src="images/facebook.png" alt="Facebook"></button>
                 </div>
             </div>
         </form>
@@ -126,8 +126,12 @@
 
     <!-- advertisement -->
     <div class="advertisement">
-        <div class="box">Box 1</div>
-        <div class="box">Box 2</div>
+        <div class="box">
+            <img src="images/ad-1.jpeg" alt="advertisement">
+        </div>
+        <div class="box">
+            <img src="images/ad-2.png" alt="advertisement">
+        </div>
     </div>
 
     <!-- catgories -->

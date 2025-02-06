@@ -21,23 +21,23 @@ function closeSignUpModal() {
     document.getElementById("signUpModal").style.display = "none";
 }
 // hide and unhide password
-function togglePassword() {
-    let passwordInput = document.getElementById("password");
-    let eyeIcon = document.getElementById("eyeIcon");
+function togglePassword(inputId, eyeIconId) {
+    let passwordInput = document.getElementById(inputId);
+    let eyeIcon = document.getElementById(eyeIconId);
 
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        eyeIcon.src = "eye-closed-icon.png"; // Change to closed eye PNG
+        eyeIcon.src = "images/eye-open-icon.png";
     } else {
         passwordInput.type = "password";
-        eyeIcon.src = "eye-open-icon.png"; // Change back to open eye PNG
+        eyeIcon.src = "images/eye-closed-icon.png";
     }
 }
 
 // Function to Handle Login (Simple Alert Example)
 function submitLogin() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let username = document.getElementById("login-username").value;
+    let password = document.getElementById("login-password").value;
 
     if (username === "admin" && password === "1234") {
         alert("Welcome " + username + "!");
