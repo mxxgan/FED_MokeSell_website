@@ -23,7 +23,7 @@ body {
 
 .logo {
     font-family: "Fredoka", serif;
-    font-size:larger;
+    font-size: 25px;
     color: #f1faee;
 }
 
@@ -59,7 +59,12 @@ body {
     background-color: rgb(229, 226, 226);
     padding: 5px 10px;
     border: 2px solid #ccc; /* Light border */
-  }
+}
+.search-bar input {
+    outline: none;
+    border: none;
+    background-color: rgb(229, 226, 226)
+}
 
 .nav-bar-2 {
     display: flex;
@@ -261,9 +266,17 @@ body {
 }
 
 .box {
-    padding: 20px;
+    padding: 0;
     margin: 10px;
     box-sizing: border-box;
+}
+.box img{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 
