@@ -2,62 +2,23 @@ window.onscroll = function() {
     let scrolled = (document.documentElement.scrollTop || document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
     document.getElementById('scroll-progress').style.width = scrolled + '%';
 }
-// megan added --------------------------------------------------------------------------------
-// // Only show profile button once signed in
-// function checkLoginStatus() {
-//     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-//     if (isLoggedIn) {
-//         // hide login & sign-up buttons
-//         document.getElementById("signup-btn").style.display = "none";
-//         document.getElementById("login-btn").style.display = "none";
-
-//         // show profile button
-//         document.getElementById("profile-btn").style.display = "inline-block";
-//     }
-// }
-
-// // update navbar after logging in
-// function updateNavbar() {
-//     const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-//     if (isLoggedIn) {
-//         // Hide Sign Up and Login buttons
-//         document.getElementById("signup-btn").style.display = "none";
-//         document.getElementById("login-btn").style.display = "none";
-
-//         // Show Profile button
-//         document.getElementById("profile-btn").style.display = "inline-block";
-//     }
-// }
-
-// document.addEventListener("DOMContentLoaded", updateNavbar);
-
-// // Call on page load
-// checkLoginStatus();
-
-// // Simulated Login Function (Call this when the user logs in)
-// function loginUser() {
-//     localStorage.setItem("isLoggedIn", true);
-//     checkLoginStatus();
-// }
-
-// // Simulated Logout Function (Call this when the user logs out)
-// function logoutUser() {
-//     localStorage.removeItem("isLoggedIn");
-//     location.reload(); // Refresh to reset the navbar
-// }
-// ----------------------------------------------------------------------------
 
 // Login 
 // Function to Open Modal
-function openModal() {
+function openLoginModal() {
     document.getElementById("loginModal").style.display = "block";
+}
+function openSignUpModal() {
+    document.getElementById("signUpModal").style.display = "block";
 }
 
 // Function to Close Modal
-function closeModal() {
+function closeLoginModal() {
     document.getElementById("loginModal").style.display = "none";
+}
+function closeSignUpModal() {
+    document.getElementById("signUpModal").style.display = "none";
 }
 // hide and unhide password
 function togglePassword() {
@@ -97,68 +58,92 @@ function submitLogin() {
         alert("Invalid username or password!");
     }
 }
-// gladys original submitlogin function ----------------------------------
-function submitLogin() {
+// Function to Handle Sign Up (Simple Alert Example)
+function submitSignUp() {
     let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (username === "admin" && password === "1234") {
-        alert("Welcome " + username + "!");
-        closeModal();
+    if (username === "") {
+        alert("Username cannot be empty!"); 
     } else {
-        alert("Invalid username or password!");
+        console.log("Logging in as:", username); 
     }
+
+    if (email === "") {
+        alert("Email cannot be empty!"); 
+    } else if (!email.includes("@")) {
+        alert("Please enter a valid email address!"); 
+    } else {
+        console.log("Signing up with email:", email);
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    alert("Sign-Up Successful!");
+    closeSignUpModal();
 }
 // -----------------------------------------------------------------------------
 // api
-const API_URL = "https://yourdb.restdb.io/rest/users"; // Replace with your RestDB collection
-    const API_KEY = "your-api-key"; // Replace with your RestDB API key
+// const API_URL = "https://login-a8dd.restdb.io/rest/account"; // Replace with your RestDB collection
+//     const API_KEY = "67920f3052b8e1fed15efd5a"; // Replace with your RestDB API key
 
-    async function submitLogin() {
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
 
-        // Password must contain letters and numbers (at least 6 chars)
-        let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-        if (!passwordPattern.test(password)) {
-            alert("Password must contain at least one letter, one number, and be at least 6 characters long.");
-            return;
-        }
-
-        try {
-            // Fetch users from RestDB
-            let response = await fetch(`${API_URL}?q={"username": "${username}"}`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "x-apikey": API_KEY
-                }
-            });
-
-            let users = await response.json();
-
-            if (users.length === 0) {
-                alert("User not found!");
-                return;
-            }
-
-            // Check if password matches
-            let user = users[0]; // Assume first match
-            if (user.password === password) { // ⚠️ Passwords should be hashed for security
-                alert("Login successful!");
-                closeModal();
-            } else {
-                alert("Incorrect password!");
-            }
-
-        } catch (error) {
-            console.error("Login error:", error);
-            alert("Error logging in. Please try again later.");
-        }
-    }
-
-// chat page 
-let currentChat = "";
+//[STEP 0]: Make sure our document is A-OK
+document.addEventListener('DOMContentLoaded', function () {
+    const APIKEY = "67920f3052b8e1fed15efd5a";
+    // document.getElementById("update-contact-container").style.display = "none";
+    // document.getElementById("add-update-msg").style.display = "none";
+  
+    //[STEP 1]: Create our submit form listener
+    document.getElementById("submitSignUp").addEventListener("click", function (e) {
+      e.preventDefault();
+  
+      //[STEP 2]: let's retrieve form data
+      //for now we assume all information is valid
+      //you are to do your own data validation
+      let username = document.getElementById("acct_username").value;
+      let email = document.getElementById("acct_email").value;
+      let password = document.getElementById("acct_password").value;
+  
+      //[STEP 3]: get form values when user clicks on send
+      //Adapted from restdb api
+      let jsondata = {
+        "username": username,
+        "email": email,
+        "password": password,
+      };
+  
+      //[STEP 4]: Create our AJAX settings. Take note of API key
+      let settings = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(jsondata)
+      };
+  
+      //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
+      fetch("https://login-a8dd.restdb.io/rest/account", settings)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+  
+          document.getElementById("submitSignUp").disabled = true;
+          document.getElementById("signUpForm").reset();
+        })
+        .catch(error => console.log(error));
+    });
+  });
+  
+// // chat page 
+// let currentChat = "";
 
 // Function to open a chat
 function openChat(user) {

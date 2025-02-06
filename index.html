@@ -44,8 +44,8 @@
             <button><img src="" alt="SELL"></button>
         </a>
         
-        <button id="signup-btn">Sign Up</button>
-        <button id="login-btn" class="login-button" onclick="openModal()">Login</button>
+        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
+        <button id="login-btn" class="login-button" onclick="openLoginModal()">Login</button>
 
         <a href="profilepage.html" id="profile-btn" style="display: none;">
             <button>Profile</button>
@@ -55,14 +55,14 @@
     <!-- Login modal -->
     <div class="modal" id="loginModal">
         <div class="modal-content">
-            <button class="close-button" onclick="closeModal()">×</button>
+            <button class="close-button" onclick="closeLoginModal()">×</button>
             <h2>Login</h2>
             <div class="username-container">
-                <input type="text" id="username" placeholder="Phone Number/Email/Username">
+                <input type="text" id="username" placeholder="Username">
             </div>
             <div class="password-container">
                 <input type="password" id="password" placeholder="Password">
-                <img src="images/eye-open-icon.png" class="eye-icon" id="eyeIcon" onclick="togglePassword()">
+                <img src="images/eye-open-icon.png" class="eye-icon" id="eyeIcon" onclick="togglePassword()" width="20px", height="auto">
             </div>
             <button><h5>forgot password?</h5></button>
 
@@ -75,6 +75,41 @@
                 <button><img src="" alt="Facebook"></button>
             </div>
         </div>
+    </div>
+    
+    <!-- sign up modal -->
+    <div class="modal" id="signUpModal">
+        <form id="signUpForm">
+            <div class="signUpModal-content">
+                <button class="close-button" onclick="closeSignUpModal()">×</button>
+                <h2>Sign Up</h2>
+                <div class="username-container">
+                    <input type="text" id="acct_username" placeholder="Username">
+                </div>
+                <div class="email-container">
+                    <input type="text" id="acct_email" placeholder="Email">
+                </div>
+                <div class="password-container">
+                    <div class="password-input">
+                        <input type="password" id="acct_password" placeholder="Password">
+                        <img src="images/eye-open-icon.png" class="signUp-eye-icon" id="eyeIcon" onclick="togglePassword()" width="20px", height="auto">
+                    </div>
+                    <div class="password-confirm">
+                        <input type="password" id="acct_confirm-password" placeholder="Confirm password">
+                        <img src="images/eye-open-icon.png" class="signUp-eye-icon-confirm" id="eyeIcon" onclick="togglePassword()" width="20px", height="auto">
+                    </div>
+                </div>
+    
+                <input type="submit" value="Sign Up" class="signUp-submit-button" id="submitSignUp">
+                <h4>Already a user? <span>Login</span></h4>
+                <p>Or Sign Up with</p>
+    
+                <div class="signUp-methods">
+                    <button><img src="" alt="Google"></button>
+                    <button><img src="" alt="Facebook"></button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <div class="nav-bar-3">
