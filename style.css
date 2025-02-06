@@ -288,7 +288,7 @@ body {
     padding: 10px;
 }
 
-.item {
+.product-item {
     min-width: 200px; 
     height: 100px;
     margin-right: 20px; /* Adds space between items */
@@ -986,7 +986,7 @@ body {
     border: 3px solid #f6d0d0;
 }
 
-
+    
 
 
 
