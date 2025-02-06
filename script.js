@@ -181,3 +181,17 @@ function sendMessage() {
 
     messageInput.value = ""; // Clear input field
 }
+
+
+
+// products page
+document.addEventListener("DOMContentLoaded", function () {
+    const bigImage = document.querySelector(".big-image img");
+    const smallImages = document.querySelectorAll(".small-image img");
+
+    smallImages.forEach(img => {
+        img.addEventListener("click", function () {
+            bigImage.src = this.src; // Change big image to clicked small image
+        });
+    });
+});
