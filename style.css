@@ -1184,39 +1184,54 @@ body {
     justify-content: center;
 } */
 
+.profile-section {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    align-items: center; 
+    justify-content: flex-start;
+    width: 70%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* display: flex;
+    align-items: center;  
+    margin-bottom: 20px;
+    width:70%;
+    justify-content: flex-start; 
+    margin-bottom: 10px;  */
+}
+
 .product-desc {
     width: 55%;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     display: flex; /* Use flex to align content inside the description */
     text-align:center;
     /* margin-right:20px; */
 }
 
 .product-details {
-    margin-top: 30px;
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     display: flex; /* Use flex to align content inside the description */
     justify-content: center;
     text-align: start;
+    gap: 6.5px;
 }
 
 @media (max-width: 768px) {
-
     .product-container {
         flex-direction: column; 
         align-items: center;
-        margin-left: 0; /* Adjust the margin to center it on smaller screens */
+        /* margin-left: 0; Adjust the margin to center it on smaller screens */
     }
 
     .profile-section {
-        flex-direction: column; 
+        flex-direction: row; 
         align-items: center; 
-        margin-bottom: 10px; 
+        text-align: left;
     }
 
     .product-image {
@@ -1228,11 +1243,17 @@ body {
         margin-top: 20px; /* Add space above product description */
         width: 100%;
         text-align: center; 
+        align-items: center;
+        align-items: flex-start;
     }
 
     .product-details {
         margin-top: 20px;
-        text-align: center; 
+        text-align: left; 
+    }
+
+    .product-details h1 {
+        text-align:left;
     }
 
     .big-image img {
@@ -1243,6 +1264,22 @@ body {
     .small-image img {
         width: calc(100% / 3 - 10px); /* Adjust the small image size for mobile */
     }
+
+    .product-chat {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image2 {
+        text-align:left;
+        align-items: flex-start;
+    }
+
+    .username2 {
+        text-align: left;
+        margin-left: 10px; 
+    }
 }
 
 .profile-image2 {
@@ -1250,7 +1287,7 @@ body {
     height: 90px;
     border-radius: 50%;
     overflow: hidden;
-    margin-top: 20px;
+    flex-shrink: 0;
 }
 
 .profile-image2 img {
@@ -1272,8 +1309,46 @@ body {
     font-weight: bold;
 }
 
+.product-chat {
+    padding: 8px 16px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Center button on small screens */
+    text-align: center;
+    margin-top: 20px;
+}
+.product-chat:hover {
+    background-color: #e55353;
+}
 
+.popularity {
+    color: red; 
+    font-weight:bolder; 
+}
 
+.deets {
+    color: #646465;
+    font-family: 'Poppins';
+    font-style:oblique;
+}
+
+.important-details {
+    color: #969799;
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+}
+
+.product-details h1{
+    font-size: 30px;
+}
+
+.product-details h2 {
+    font-size:39px;
+}
 
 
 /* footer ------------------------------------------------------------------------------------------------------------- */
