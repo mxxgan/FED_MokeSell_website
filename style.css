@@ -421,9 +421,9 @@ body {
 
 /* profile page ------------------------------------------------------------------------------------------------------------- */
 
-.profile-section {
-    display: flex;
-    justify-content:center;
+.p-section {
+    display: flex !important;
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
@@ -433,8 +433,10 @@ body {
     align-items: center;
     padding: 20px;
     gap: 30px;
-    width: 60%;
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
 }
 
 .profile-image {
@@ -458,7 +460,7 @@ body {
 }
 
 .username {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     text-align: center;
 }
 
@@ -468,15 +470,18 @@ body {
     font-weight: bold;
 }
 
-.profile-info {
-    display: flex;
-    gap: 20px; 
-    justify-content: center;
+.profile-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row; 
     align-items: center;
 }
 
-.profile-info .reviews,
-.profile-info .followers {
+
+.profile-information .reviews,
+.profile-information .followers {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -493,10 +498,13 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .profile-info {
-        flex-direction: column; /* Stack reviews & followers */
+    .profile-information {
+        flex-direction: row !important; 
+        align-items: center;
+        justify-content: center;
     }
 }
+
 
 .info{
     display: flex;
@@ -613,11 +621,49 @@ body {
 }
 
 
+/* follow page -------------------------------------------------------------------------------------------------------------------------- */
+
+.follow-button {
+    display: flex;  
+    justify-content: center; 
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;  
+    text-align: center;
+}
 
 
+.follow-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
+.follow-btn:hover {
+    background-color: #0056b3;
+}
 
+@media screen and (max-width: 768px) {
+    .follow-button {
+        margin-top: 15px;  /* Space between profile info and the follow button */
+        justify-content: center; /* Ensure button is centered in the container */
+        width: 100%; /* Make the container take up full width */
+    }
 
+    .follow-btn {
+        margin: 0 auto; /* Center the button itself */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .follow-btn {
+        margin-top: 15px; /* Space between profile info and button */
+    }
+}
 
 
 /* listings page ------------------------------------------------------------------------------------------------------------- */
@@ -1349,6 +1395,68 @@ body {
 .product-details h2 {
     font-size:39px;
 }
+
+
+/* games ------------------------------------------------------------------------------------------------------------- */
+
+.gallery {
+    margin: 10px;
+    flex-wrap: wrap;
+    float: left;
+    width: 250px;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: white;
+    text-align: center;
+    overflow: hidden; /* Prevents content overflow */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+div.gallery:hover {
+  border: 3px solid #f6d0d0;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+.description-games {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Reenie Beanie';
+    font-size: 20px;
+    background-color: rgb(233, 248, 253);
+}
+
+#flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Inherits the text color from its parent */
+}
+
+a:hover {
+    text-decoration: none; 
+    color: #445783;       
+}
+
+
+
+/* game1 */
 
 
 /* footer ------------------------------------------------------------------------------------------------------------- */
