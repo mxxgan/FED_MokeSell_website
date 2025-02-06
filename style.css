@@ -1,6 +1,7 @@
 
 
 * {
+    outline: 1px solid red;
     box-sizing: border-box;
     margin:0;
     padding:0;
@@ -9,6 +10,14 @@
 body {
     font-family: "Poppins", sans-serif;
     font-size: 16px; /* Adjust as needed */
+}
+svg {
+    display: block; /* Prevent inline behavior */
+    margin: 0; /* No extra margins */
+    padding: 0; /* No extra paddings */
+    overflow: hidden; /* Prevent content spill */
+    width: 100%; /* Or set a specific size */
+    height: auto; /* Maintain aspect ratio */
 }
 
 #scroll-progress {
@@ -53,8 +62,9 @@ body {
 
 .search-bar {
     display: flex;
-    align-items: center;
-    margin: 5px 0;
+    justify-content: space-between;
+    margin: 0;
+    width: 30%;
     border-radius: 25px; /* Rounded corners */
     background-color: rgb(229, 226, 226);
     padding: 5px 10px;
@@ -65,6 +75,10 @@ body {
     border: none;
     background-color: rgb(229, 226, 226)
 }
+.search-bar button {
+    position: relative;
+    right: 5px;
+}
 
 .nav-bar-2 {
     display: flex;
@@ -73,8 +87,14 @@ body {
     background-color: #457b9d;
     padding: 10px 20px;
 }
+.nav-bar-2 img{
+    vertical-align: middle;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
 
-.search-bar, .sell-button, .logo {
+.sell-button, .logo {
     display: inline-block;
 }
 
@@ -159,7 +179,7 @@ body {
     border-radius: 5px;
 }
 
-.eye-icon {
+.login-eye-icon {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -167,11 +187,17 @@ body {
     cursor: pointer;
     font-size: 18px;
 }
+/* remove the default hide password icon */
+input::-ms-reveal, 
+input::-webkit-credentials-auto-fill-button, 
+input::-webkit-textfield-decoration-container {
+    display: none;
+}
 
-.eye-icon img {
+/* .login-eye-icon img {
     color: black;
     width: 100%;
-}
+} */
 
 .close-button {
     position: absolute;
@@ -196,6 +222,7 @@ body {
 .login-submit-button:hover {
     background: #536d92;
 }
+
 /* signup */
 .signUpModal-content {
     background: white;
@@ -281,10 +308,10 @@ body {
     font-size: 18px;
 }
 
-.eye-icon img {
+/* .eye-icon img {
     color: black;
     width: 100%;
-}
+} */
 
 .close-button {
     position: absolute;
@@ -315,7 +342,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #bfeff0;
-    padding: 10px 0;
+    padding: 10px 20px;
     width: 100%; /* nav bar to fill up the full length */
 }
 
