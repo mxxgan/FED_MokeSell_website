@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
     <title>Homepage</title>
 </head>
+
+<style>
+     .title {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 300 700;
+        font-size: 26px;
+    }
+    
+</style>
 
 <body>
     <!-- marquee banner -->
@@ -134,19 +146,282 @@
         </div>
     </div>
 
-    <!-- catgories -->
-    <div class="for-you">
-        <div class="product-item">Snoopy Plush</div>
-        <div class="product-item">Item 2</div>
-        <div class="product-item">Item 3</div>
-        <div class="product-item">Item 4</div>
-        <div class="product-item">Item 5</div>
-        <div class="product-item">Item 6</div>
+     <!-- Category Filter Buttons -->
+      <div class="filtering">
+     <div class="category-filter">
+        <button class="filter-btn" data-category="all">All</button>
+     </div>
+
+        <div class="category-filter">
+            <select id="fashionDropdown" class="filter-dropdown">
+                <option value="fashion">Fashion</option>
+                <option value="clothes">Clothes</option>
+                <option value="bags">Bags</option>
+                <option value="shoes">Shoes</option>
+                <option value="accessories">Accessories</option>
+            </select>
+        </div>
+
+        <div class="category-filter">
+            <select id="hobbiesDropdown" class="filter-dropdown">
+                <option value="all">Hobbies&Collectibles</option>
+                <option value="toys">Toys</option>
+                <option value="music">Music</option>
+                <option value="hobbies">Hobbies</option>
+                <option value="collectibles">Collectibles</option>
+            </select>
+        </div>
+
+        <div class="category-filter">
+            <select id="beautyDropdown" class="filter-dropdown">
+                <option value="all">Beauty & Care</option>
+                <option value="nail">Nail Accessories</option>
+                <option value="haircare">Haircare</option>
+                <option value="bodycare">Bodycare</option>
+                <option value="fragrance">Fragrance</option>
+                <option value="makeup">Makeup</option>
+            </select>
+        </div>
+
+        <div class="category-filter">
+            <select id="electronicsDropdown" class="filter-dropdown">
+                <option value="all">Electronics</option>
+                <option value="phones">Phones</option>
+                <option value="computers">Computers</option>
+                <option value="electronic-accessories">Electronic accessories</option>
+            </select>
+        </div>
+
+        <div class="category-filter">
+            <select id="travelDropdown" class="filter-dropdown">
+                <option value="all">Travel</option>
+                <option value="luggage">Luggage</option>
+                <option value="travel-essentials">Travel essentials</option>
+            </select>
+        </div>
+
+        <div class="category-filter">
+            <select id="gamingDropdown" class="filter-dropdown">
+                <option value="all">Gaming</option>
+                <option value="nail">Video Games</option>
+                <option value="haircare">Gaming Accesories</option>
+            </select>
+        </div>
     </div>
+
+
+    <!-- catgories -->
+    <section class="for-you">
+        <div class="title">
+            <h1><u>FOR YOU</u></h1>
+        </div>
+
+        <div class="for-you-category">
+            <div class="product-item" data-category="bags">
+                <img src="images/❦︎_ j͟u͟s͟t͟ l͟i͟k͟e͟ a͟n͟d͟ s͟u͟s͟c͟r͟i͟b͟e͟ ♡︎.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>black leather bag</strong></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="clothes">
+                <img src="images/𓈒 ׄ ୨୧  follow for more !  𖥦 __.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>Cute summer red</strong></p>
+                    <p class="foryou-product-title"><strong>babydoll top</strong></p>
+                    <p>S$12</p>
+                    <p>Brand New</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="clothes">
+                <img src="images/👠.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>XHS cute summer</strong></p>
+                    <p class="foryou-product-title"><strong>set</strong></p>
+                    <p>S$29</p>
+                    <p>Like New</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-you">
+        <div class="title">
+            <h1><u>YOUR FRIENDS</u></h1>
+        </div>
+
+        <div class="for-you-category">
+            <a href="followpage.html" class = "product-item" data-category="hobbies">
+                    <img src="images/cute crochet lightstick.jpeg">
+                    <div class="foryou-product-desc">
+                        <p class="foryou-product-title"><strong>Customisable</strong></p>
+                        <p class="foryou-product-title"><strong>Crochet cover</strong></p>
+                        <p>S$10</p>
+                        <p>Brand New</p>
+                        <p>❤️ 32 Likes</p>
+                    </div>
+            </a>
+
+
+            <div class="product-item" data-category="hobbies">
+                <img src="images/17.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>Handmade clay</strong></p>
+                    <p class="foryou-product-title"><strong>keychains</strong></p>
+                    <p>S$10</p>
+                    <p>Brand New</p>
+                    <p>❤️ 20 Likes</p>
+                </div>
+            </div>
+
+            <div class="product-item" data-category="clothes">
+                <img src="images/skirt.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>checkered skirt</strong></p>
+                    <p class="foryou-product-title"><strong></strong></p>
+                    <p>S$10</p>
+                    <p>Like New</p>
+                    <p>❤️ 16 Likes</p>
+                </div>
+            </div>
+        
+
+            <div class="product-item" data-category="bags">
+                <img src="images/❦︎_ j͟u͟s͟t͟ l͟i͟k͟e͟ a͟n͟d͟ s͟u͟s͟c͟r͟i͟b͟e͟ ♡︎.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>black leather bag</strong></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="collectibles">
+                <img src="images/🐰🎀🍓.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>transparent card</strong></p>
+                    <p class="foryou-product-title"><strong>pouch</strong></p>
+                    <p>S$9</p>
+                <p>Like New</p>
+                <p>❤️ 10 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="accessories">
+                <img src="images/Crochet Hair Clips, Handmade Hair Accessories, Cute Designed Hair Pin, Great Gifts for Babies Girls and Women.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>handmade crochet</strong></p>
+                    <p class="foryou-product-title"><strong>hairclips</strong></p>
+                    <p>S$4</p>
+                    <p>Brand New</p>
+                    <p>❤️ 18 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="clothes">
+                <img src="images/babydoll top.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>coquette babydoll</strong></p>
+                    <p class="foryou-product-title"><strong>top</strong></p>
+                    <p>S$15</p>
+                    <p>Brand New</p>
+                    <p>❤️ 25 Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+           
+        </div>
+    </div>
+
+
+    <section class="trending">
+        <div class="title">
+            <h1><u>TRENDING</u></h1>
+        </div>
+
+        <div class="trending-category">
+            <div class="product-item" data-category="bag">
+                <img src="images/download (8).jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>crocheted pastel</strong></p>
+                    <p class="foryou-product-title"><strong>handbag</strong></p>
+                    <p>S$38</p>
+                    <p>Brand New</p>
+                    <p>❤️ 30 Likes</p>
+                </div>
+            </div>
+
+            <div class="product-item" data-category="collectibles">
+                <img src="images/_Boys in books are better _ Sticker for Sale by salmamagdy.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>Little Women book</strong></p>
+                    <p class="foryou-product-title"><strong>series</strong></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 5 Likes</p>
+                </div>
+            </div>       
+
+            <div class="product-item" data-category="nail">
+                <img src="images/𝘚𝘢𝘷𝘦 = 𝘍𝘰𝘭𝘭𝘰𝘸 _𝘯𝘰 𝘳𝘦𝘱𝘦𝘢𝘵_ _3.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>green blue pink</strong></p>
+                    <p class="foryou-product-title"><strong>softcore nails</strong></p>
+                    <p>S$20</p>
+                    <p>Brand New</p>
+                    <p>❤️ 41 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="makeup">
+                <img src="images/@jessssiicaaaa.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>WTS rhode balms</strong></p>
+                    <p class="foryou-product-title"><strong</strong></p>
+                    <p class="foryou-product-title"><strong</strong></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+
+            <div class="product-item" data-category="bag">
+                <img src="images/❦︎_ j͟u͟s͟t͟ l͟i͟k͟e͟ a͟n͟d͟ s͟u͟s͟c͟r͟i͟b͟e͟ ♡︎.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>black leather bag</strong></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+            <div class="product-item" data-category="collectibles">
+                <img src="images/plush.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>Jun doll plush</strong></p>
+                    <p></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+
+            <div class="product-item" data-category="clothes">
+                <img src="images/🎀🎀.jpeg">
+                <div class="foryou-product-desc">
+                    <p class="foryou-product-title"><strong>brandy melville</strong></p>
+                    <p class="foryou-product-title"><strong>pink tops</strong></p>
+                    <p>S$20</p>
+                    <p>Lightly Used</p>
+                    <p>❤️ 19 Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     
-
-
-
     <footer class="footer">
         <div class = "footer-logo">
             <div class = "logo">MokeSell</div>
@@ -196,7 +471,6 @@
     </footer>
 
     <script src="script.js"></script>
-
 
 
 

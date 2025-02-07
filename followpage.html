@@ -100,10 +100,10 @@
       <section class = "p-section">
         <div class="profile-container">
             <div class="profile-image">
-                <img src="images/pfp1.jpg" alt="pfp" class="profile-pic">
+                <img src="images/angry snoopy.jpeg" alt="pfp" class="profile-pic">
             </div>
                 <div class = "username">
-                    <h2>@bboogyuli</h2>
+                    <h2>@snoopylver1</h2>
                 </div>
     
                 <!-- reviews and followers Section -->
@@ -114,7 +114,7 @@
                     </div>
                     <div class="followers">
                         <strong>Followers</strong> 
-                        <div class="follower-count">200</div>
+                        <div class="follower-count">100</div>
                     </div>
                     <div class="follow-button">
                         <button class="follow-btn">Follow</button>
@@ -450,6 +450,18 @@
 </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        document.querySelector('.follow-btn').addEventListener('click', function () {
+    const button = this;
+    if (button.textContent === 'Follow') {
+        button.textContent = 'Following';
+        // Optionally, you can add some other style changes or logic for a more dynamic effect.
+    } else {
+        button.textContent = 'Follow';
+    }
+});
+    </script>
 
 </body>
 </html>
