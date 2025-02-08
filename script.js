@@ -270,6 +270,49 @@ function filterProducts(category) {
     });
 }
 
+// help page ---------------------------------------------------------------------------------------------------------------
+async function submitQuestion() {
+    const questionInput = document.getElementById("messageInput").value;
+    
+    if (questionInput) {
+        try {
+            // Send the user's message to the backend
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer REDACTED`,  // Replace with your actual API key
+                },
+                body: JSON.stringify({
+                    model: 'gpt-3.5-turbo',  // Use the appropriate model (e.g., gpt-3.5-turbo or gpt-4)
+                    messages: [
+                        { role: 'system', content: 'You are a helpful assistant.' },
+                        { role: 'user', content: questionInput },
+                    ],
+                }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {  // Check if the response is successful
+                // Display the AI response in the help content
+                const helpContent = document.getElementById("helpContent");
+                helpContent.innerHTML = `<p><strong>AI:</strong> ${data.choices[0].message.content}</p>`;
+            } else {
+                console.error('Error:', data);
+                alert(`Error: ${data.error.message || 'An unknown error occurred'}`);
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Error occurred while contacting the AI service.');
+        }
+    } else {
+        alert("Please type a question before submitting.");
+    }
+
+    document.getElementById("messageInput").value = ''; // Clear the input field
+}
+
 
 
 
