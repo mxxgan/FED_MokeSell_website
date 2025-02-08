@@ -49,9 +49,9 @@
             <input type="text" placeholder="Search on MokeSell...">
             <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
         </div>
-        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()"><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
-        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()"><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
-        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()"><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
+        <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
+        <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
+        <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
         
         <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
         <button id="login-btn" class="login-button" onclick="openLoginModal()">Login</button>
@@ -76,16 +76,16 @@
                 <div class="password-container">
                     <div class="password-input">
                         <input type="password" id="acct_password" placeholder="Password">
-                        <img src="images/eye-open-icon.png" class="signUp-eye-icon" id="eyeIcon1" onclick="togglePassword('acct_password', 'eyeIcon1')" width="20px", height="auto">
+                        <img src="images/eye-closed-icon.png" class="signUp-eye-icon" id="eyeIcon1" onclick="togglePassword('acct_password', 'eyeIcon1')" width="20px", height="auto">
                     </div>
                     <div class="password-confirm">
                         <input type="password" id="acct_confirm-password" placeholder="Confirm password">
-                        <img src="images/eye-open-icon.png" class="signUp-eye-icon-confirm" id="eyeIcon2" onclick="togglePassword('acct_confirmPassword', 'eyeIcon2')" width="20px", height="auto">
+                        <img src="images/eye-closed-icon.png" class="signUp-eye-icon-confirm" id="eyeIcon1" onclick="togglePassword('acct_confirmPassword', 'eyeIcon')" width="20px", height="auto">
                     </div>
                 </div>
     
                 <input type="submit" value="Sign Up" class="signUp-submit-button" id="submitSignUp">
-                <h4>Already a user? <button id="login-btn" class="login-link" onclick="closeSignUpModal(),openLoginModal()">Login</button></h4>
+                <h4>Already a user? <button type="button" id="login-link-btn" class="login-link" onclick="openLoginModal()">Login</button></h4>
                 <p>Or Sign Up with</p>
     
                 <div class="signUp-methods">
@@ -107,13 +107,13 @@
                 </div>
                 <div class="password-container">
                     <input type="password" id="login_password" placeholder="Password">
-                    <img src="images/eye-open-icon.png" class="login-eye-icon" id="eyeIcon" onclick="togglePassword('login_password', 'eyeIcon')" width="20px" height="auto">
+                    <img src="images/eye-closed-icon.png" class="login-eye-icon" id="eyeIcon" onclick="togglePassword('login_password', 'eyeIcon')" width="20px" height="auto">
                 </div>
                 <button><h5>forgot password?</h5></button>
             
                 <button type="submit" id="submitLogin" class="login-submit-button">Login</button>
                 
-                <h4>New User? <button id="signup-btn" class="signup-link" onclick="closeLoginModal(),openSignUpModal()">Sign In</button></h4>
+                <h4>New User? <button type="button" id="signup-link-btn" class="signup-link" onclick="openSignUpModal()">Sign In</button></h4>
                 <p>Or login with</p>
         
                 <div class="login-methods">
@@ -148,10 +148,10 @@
     </div>
 
      <!-- Category Filter Buttons -->
-      <div class="filtering">
-     <div class="category-filter">
-        <button class="filter-btn" data-category="all">All</button>
-     </div>
+    <div class="filtering">
+        <div class="category-filter">
+            <button class="filter-btn" data-category="all">All</button>
+        </div>
 
         <div class="category-filter">
             <select id="fashionDropdown" class="filter-dropdown">

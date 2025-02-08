@@ -4,147 +4,88 @@ window.onscroll = function() {
 }
 
 
-// Login 
-// Function to Open Modal
-function openLoginModal() {
-    document.getElementById("loginModal").style.display = "block";
-}
-function openSignUpModal() {
-    document.getElementById("signUpModal").style.display = "block";
-}
-
-// Function to Close Modal
-function closeLoginModal() {
-    document.getElementById("loginModal").style.display = "none";
-}
-function closeSignUpModal() {
-    document.getElementById("signUpModal").style.display = "none";
-}
-// hide and unhide password
-function togglePassword(inputId, eyeIconId) {
-    let passwordInput = document.getElementById(inputId);
-    let eyeIcon = document.getElementById(eyeIconId);
-
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        eyeIcon.src = "images/eye-open-icon.png";
-    } else {
-        passwordInput.type = "password";
-        eyeIcon.src = "images/eye-closed-icon.png";
-    }
-}
-
-// Function to Handle Login (Simple Alert Example)
-function submitLogin() {
-    let username = document.getElementById("login-username").value;
-    let password = document.getElementById("login-password").value;
-
-    if (username === "admin" && password === "1234") {
-        alert("Welcome " + username + "!");
-
-        // Store login state in localStorage
-        localStorage.setItem("isLoggedIn", true);
-        localStorage.setItem("username", username); // Store username if needed
-
-        // Close the login modal
-        closeModal();
-
-        // Update the navbar
-        updateNavbar();
-
-        // Redirect to the home/profile page
-        window.location.href = "profile.html"; // Change to your desired page
-    } else {
-        alert("Invalid username or password!");
-    }
-}
-// Function to Handle Sign Up (Simple Alert Example)
-function submitSignUp() {
-    let username = document.getElementById("username").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirmPassword").value;
-
-    if (username === "") {
-        alert("Username cannot be empty!"); 
-    } else {
-        console.log("Logging in as:", username); 
-    }
-
-    if (email === "") {
-        alert("Email cannot be empty!"); 
-    } else if (!email.includes("@")) {
-        alert("Please enter a valid email address!"); 
-    } else {
-        console.log("Signing up with email:", email);
-    }
-
-    if (password !== confirmPassword) {
-        alert("Passwords do not match!");
-        return;
-    }
-
-    alert("Sign-Up Successful!");
-    closeSignUpModal();
-}
-// -----------------------------------------------------------------------------
-// api
-// const API_URL = "https://login-a8dd.restdb.io/rest/account"; // Replace with your RestDB collection
-//     const API_KEY = "67920f3052b8e1fed15efd5a"; // Replace with your RestDB API key
-
-//[STEP 0]: Make sure our document is A-OK
+// Login and sign up api
 document.addEventListener('DOMContentLoaded', function () {
     const APIKEY = "67920f3052b8e1fed15efd5a";
-  
-    //[STEP 1]: Create our submit signup form listener
-    document.getElementById("submitSignUp").addEventListener("click", function (e) {
-      e.preventDefault();
-  
-      //[STEP 2]: let's retrieve form data
-      //for now we assume all information is valid
-      //you are to do your own data validation
-      let username = document.getElementById("acct_username").value;
-      let email = document.getElementById("acct_email").value;
-      let password = document.getElementById("acct_password").value;
-  
-      //[STEP 3]: get form values when user clicks on send
-      //Adapted from restdb api
-      let jsondata = {
-        "username": username,
-        "email": email,
-        "password": password,
-      };
-  
-      //[STEP 4]: Create our AJAX settings. Take note of API key
-      let settings = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-apikey": APIKEY,
-          "Cache-Control": "no-cache"
-        },
-        body: JSON.stringify(jsondata)
-      };
-  
-      //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
-      fetch("https://login-a8dd.restdb.io/rest/account", settings)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-  
-          document.getElementById("submitSignUp").disabled = true;
-          document.getElementById("signUpForm").reset();
-        })
-        .catch(error => console.log(error));
+
+    document.getElementById("login-link-btn").addEventListener("click", function () {
+        closeSignUpModal(); // Close the sign-up modal
+        openLoginModal();   // Open the login modal
     });
 
-    // login form submission
-    
-    document.getElementById("submitLogin").addEventListener("click", function(e) {
-        e.preventDefault();  // Prevent form submission from refreshing the page
+    // Fix for sign-up button inside the login modal
+    document.getElementById("signup-link-btn").addEventListener("click", function () {
+        closeLoginModal();  // Close the login modal
+        openSignUpModal();  // Open the sign-up modal
+    });
 
+    // Function to handle user signup
+    function handleSignUp() {
+        let username = document.getElementById("acct_username").value;
+        let email = document.getElementById("acct_email").value;
+        let password = document.getElementById("acct_password").value;
+        let confirmPassword = document.getElementById("acct_confirm-password").value;
+
+        // Check if all fields are filled
+        if (!username || !email || !password || !confirmPassword) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        let jsondata = {username, email, password};
+
+        let settings = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "x-apikey": APIKEY,
+                "Cache-Control": "no-cache"
+            },
+            body: JSON.stringify(jsondata)
+        };
+
+        fetch("https://login-a8dd.restdb.io/rest/account", settings)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById("submitSignUp").disabled = true;
+                document.getElementById("signUpForm").reset();
+                alert("Sign-up successful!");
+                closeSignUpModal();
+                openLoginModal(); // Automatically open login after signup
+            })
+            .catch(error => console.log(error));
+    }
+
+    // Attach click event listener to signup button
+    document.getElementById("submitSignUp").addEventListener("click", function (e) {
+        e.preventDefault();
+        handleSignUp();
+    });
+
+    // Attach keydown event listener to sign-up form (only inside the form)
+    document.getElementById("signUpForm").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            handleSignUp();
+        }
+    });
+
+    // Function to handle user login
+    function handleLogin() {
         let email = document.getElementById("login_email").value;
         let password = document.getElementById("login_password").value;
+
+        if (!email || !password) {
+            alert("Please enter both email and password.");
+            return;
+        }
 
         let apiUrl = `https://login-a8dd.restdb.io/rest/account?q={"email":"${email}"}`;
 
@@ -157,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        // Fetch user data
         fetch(apiUrl, settings)
             .then(response => response.json())
             .then(data => {
@@ -171,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let user = data[0]; // Assuming email is unique and we get one match
 
                 if (user.password === password) {
-                    document.getElementById("submitSignUp").disabled = true;
-                    document.getElementById("signUpForm").reset();
+                    document.getElementById("submitLogin").disabled = true;
+                    document.getElementById("loginForm").reset();
                     alert("Login successful!");
                     window.location.href = "loggedin.html"; // Redirect
                 } else {
@@ -180,10 +120,60 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
             .catch(error => {
-                console.error("Error:", error);  // Log any errors from the fetch
+                console.error("Error:", error);
             });
-    });   
-  });
+    }
+
+    // Attach click event listener to login button
+    document.getElementById("submitLogin").addEventListener("click", function (e) {
+        e.preventDefault();
+        handleLogin();
+    });
+
+    // Attach keydown event listener to login form (only inside the form)
+    document.getElementById("loginForm").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            handleLogin();
+        }
+    });
+});
+
+// prevent accidental modal closing
+document.getElementById("loginModal").addEventListener("click", function(event) {
+    event.stopPropagation(); 
+});
+document.getElementById("signUpModal").addEventListener("click", function(event) {
+    event.stopPropagation(); 
+});
+
+// Functions to Open and Close Modals
+function openLoginModal() {
+    document.getElementById("loginModal").style.display = "block";
+}
+function openSignUpModal() {
+    document.getElementById("signUpModal").style.display = "block";
+}
+function closeLoginModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+function closeSignUpModal() {
+    document.getElementById("signUpModal").style.display = "none";
+}
+
+// Toggle Password Visibility
+function togglePassword(inputId, eyeIconId) {
+    let passwordInput = document.getElementById(inputId);
+    let eyeIcon = document.getElementById(eyeIconId);
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.src = "images/eye-open-icon.png";
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.src = "images/eye-closed-icon.png";
+    }
+}
   
 // // chat page -------------------------------------------------------------------------------------------------
 // let currentChat = "";
