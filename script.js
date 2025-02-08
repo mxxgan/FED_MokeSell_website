@@ -171,6 +171,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let user = data[0]; // Assuming email is unique and we get one match
 
                 if (user.password === password) {
+                    document.getElementById("submitSignUp").disabled = true;
+                    document.getElementById("signUpForm").reset();
                     alert("Login successful!");
                     window.location.href = "loggedin.html"; // Redirect
                 } else {

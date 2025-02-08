@@ -49,13 +49,9 @@
             <input type="text" placeholder="Search on MokeSell...">
             <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
         </div>
-        <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
-        <a href="chat.html">
-            <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
-        </a>
-        <a href="listingpage.html">
-            <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
-        </a>
+        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()"><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
+        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()"><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
+        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()"><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
         
         <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
         <button id="login-btn" class="login-button" onclick="openLoginModal()">Login</button>
@@ -89,7 +85,7 @@
                 </div>
     
                 <input type="submit" value="Sign Up" class="signUp-submit-button" id="submitSignUp">
-                <h4>Already a user? <span>Login</span></h4>
+                <h4>Already a user? <button id="login-btn" class="login-link" onclick="closeSignUpModal(),openLoginModal()">Login</button></h4>
                 <p>Or Sign Up with</p>
     
                 <div class="signUp-methods">
@@ -117,7 +113,7 @@
             
                 <button type="submit" id="submitLogin" class="login-submit-button">Login</button>
                 
-                <h4>New User? <span>Sign In</span></h4>
+                <h4>New User? <button id="signup-btn" class="signup-link" onclick="closeLoginModal(),openSignUpModal()">Sign In</button></h4>
                 <p>Or login with</p>
         
                 <div class="login-methods">
