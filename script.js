@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-// // chat page 
+// // chat page -------------------------------------------------------------------------------------------------
 // let currentChat = "";
 
 // Function to open a chat
@@ -167,9 +167,31 @@ function sendMessage() {
     messageInput.value = ""; // Clear input field
 }
 
+function redirectToChat() {
+    window.location.href = "userchat.html";
+}
 
+function updateChat(profilePic, username) {
+    document.getElementById("headerProfilePic").src = profilePic; // Update profile picture
+    document.getElementById("chatUser").textContent = username; // Update username
+}
 
-// products page
+function sendMessage() {
+    let messageInput = document.getElementById("messageInput");
+    let messageText = messageInput.value.trim();
+    let chatMessages = document.getElementById("chatMessages");
+
+    if (messageText === "") return; // Prevent empty messages
+
+    let newMessage = document.createElement("div");
+    newMessage.classList.add("chat-message");
+    newMessage.innerHTML = `<p>You: ${messageText}</p>`;
+
+    chatMessages.appendChild(newMessage);
+    messageInput.value = ""; // Clear input field
+}
+
+// products page ---------------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
     const bigImage = document.querySelector(".big-image img");
     const smallImages = document.querySelectorAll(".small-image img");
@@ -180,3 +202,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+// home page ---------------------------------------------------------------------------------------------------------------
+
+// Get all category dropdowns
+const dropdowns = document.querySelectorAll('.filter-dropdown');
+const allButton = document.querySelector('.filter-btn[data-category="all"]');
+const products = document.querySelectorAll('.product-item');
+
+// Handle category filtering via dropdowns
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('change', function () {
+        let selectedCategory = this.value;
+        filterProducts(selectedCategory);
+    });
+});
+
+// Handle "All" button click
+allButton.addEventListener('click', function () {
+    filterProducts('all');
+});
+
+// Function to filter products based on selected category
+function filterProducts(category) {
+    products.forEach(product => {
+        let productCategory = product.getAttribute('data-category');
+        if (category === 'all' || productCategory === category) {
+            product.style.display = 'flex'; // Show matching products
+        } else {
+            product.style.display = 'none'; // Hide non-matching products
+        }
+    });
+}
+
+
+
+

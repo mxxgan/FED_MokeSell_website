@@ -230,7 +230,7 @@ input::-webkit-textfield-decoration-container {
     background: #536d92;
 }
 
-/* signup */
+/* signup ------------------------------------------------------------------------------------------------------ */
 .signUpModal-content {
     background: white;
     width: 450px;
@@ -408,26 +408,28 @@ input::-webkit-textfield-decoration-container {
     flex-wrap: wrap;
 }
 
-.box {
-    flex: 1; /* Makes both boxes equal width */
-    background-color: #a8dadc; 
-    padding: 100px;
-    border-radius: 20px; /* Rounded corners */
-    text-align: center;
-    box-sizing: border-box;
-}
 
 .advertisement {
     margin: 30px auto;
     padding: 10px;
     box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .advertisement {
+        flex-direction: column; /* Stacks the ads vertically */
+        align-items: center; /* Centers the items */
+    }
 }
 
 .box {
     padding: 0;
     margin: 10px;
     box-sizing: border-box;
+    flex:1;
 }
+
 .box img{
     padding: 0;
     width: 100%;
@@ -437,36 +439,211 @@ input::-webkit-textfield-decoration-container {
     border-radius: 10px;
 }
 
+.for-you-category {
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto; 
+    max-height: 500px; 
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+    scrollbar-width: none; 
+}
+
+.category-filter {
+    display: flex;
+    overflow-y: auto; 
+    max-height: 500px; 
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    scrollbar-width: none;         
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
 .for-you {
     display: flex; 
     overflow-x: auto; 
-    white-space: nowrap; 
+    flex-direction: column;
+    /* white-space: nowrap;  */
     width: 100%; 
     padding: 10px;
 }
 
-.product-item {
-    min-width: 200px; 
-    height: 100px;
-    margin-right: 20px; /* Adds space between items */
-    background-color: #a8dadc;
-    border-radius: 10px;
-    padding: 20px;
+.trending {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    padding: 10px;
+}
+
+.trending-category {
+    display: flex;
+    flex-wrap: wrap;  
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+}
+
+.title {
     text-align: center;
-    line-height: 100px;
+    margin-bottom: 10px;
+}
+
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    text-align: center;
+    width: 200px;
+    height: 340px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.foryou-product-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+    padding:0;
+    margin:0;
+    margin-bottom: 22px;
+    margin-top: 7px;
+}
+
+.foryou-product-desc p {
+    margin: 2px 0; 
+    font-size: 0.9rem; 
+    line-height: 1;
+
+}
+
+.foryou-product-title {
+    font-family: "Fredoka", sans-serif !important;
+    font-style:oblique;
+    font-weight:600;
+    font-stretch: 100%;
+    font-size: 1.2rem !important;
+    line-height: 0.7 !important;
+}
+
+.product-item img {
+    width: 90%;
+    height: 50%;
+    object-fit: contain;
+    margin-top: 5px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    margin-top: 10px
+}
+
+.product-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}  
+
+.product-item {
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    border: 3px solid #f6d0d0;
+}
+
+.for-you-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+} */
+/* 
+.product-item img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+ */
+
+ .filtering {
+    display: flex;
+    gap: 10px; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 10px 0;
+    width: 100%; 
+    scrollbar-width: none
+}
+
+ .category-filter {
+    margin-bottom: 5px; 
+    min-width:max-content;
+}
+
+.filter-dropdown {
+    padding: 10px 15px;
+    background-color: #f6d0d0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
     margin-right: 10px;
 }
-/* .scroll-container::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar in Webkit browsers (Chrome, Safari) */
- */
+
+.filter-dropdown:hover {
+    background-color: #ffaaaa;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    background-color: #f6d0d0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #ffaaaa;
+}
+
+@media (min-width: 768px) {
+    .category-filter {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
 
 
 /* profile page ------------------------------------------------------------------------------------------------------------- */
 
-.profile-section {
-    display: flex;
-    justify-content:center;
+.p-section {
+    display: flex !important;
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
@@ -476,8 +653,10 @@ input::-webkit-textfield-decoration-container {
     align-items: center;
     padding: 20px;
     gap: 30px;
-    width: 60%;
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
 }
 
 .profile-image {
@@ -501,7 +680,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .username {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     text-align: center;
 }
 
@@ -511,15 +690,18 @@ input::-webkit-textfield-decoration-container {
     font-weight: bold;
 }
 
-.profile-info {
-    display: flex;
-    gap: 20px; 
-    justify-content: center;
+.profile-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row; 
     align-items: center;
 }
 
-.profile-info .reviews,
-.profile-info .followers {
+
+.profile-information .reviews,
+.profile-information .followers {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -536,10 +718,13 @@ input::-webkit-textfield-decoration-container {
 }
 
 @media screen and (max-width: 480px) {
-    .profile-info {
-        flex-direction: column; /* Stack reviews & followers */
+    .profile-information {
+        flex-direction: row !important; 
+        align-items: center;
+        justify-content: center;
     }
 }
+
 
 .info{
     display: flex;
@@ -656,11 +841,49 @@ input::-webkit-textfield-decoration-container {
 }
 
 
+/* follow page -------------------------------------------------------------------------------------------------------------------------- */
+
+.follow-button {
+    display: flex;  
+    justify-content: center; 
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;  
+    text-align: center;
+}
 
 
+.follow-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
+.follow-btn:hover {
+    background-color: #0056b3;
+}
 
+@media screen and (max-width: 768px) {
+    .follow-button {
+        margin-top: 15px;  /* Space between profile info and the follow button */
+        justify-content: center; /* Ensure button is centered in the container */
+        width: 100%; /* Make the container take up full width */
+    }
 
+    .follow-btn {
+        margin: 0 auto; /* Center the button itself */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .follow-btn {
+        margin-top: 15px; /* Space between profile info and button */
+    }
+}
 
 
 /* listings page ------------------------------------------------------------------------------------------------------------- */
@@ -783,6 +1006,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 /* chat page ------------------------------------------------------------------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -790,70 +1014,96 @@ input::-webkit-textfield-decoration-container {
     font-family: Arial, sans-serif;
 }
 
+/* Sidebar and chat window styles */
 .chat-container {
     display: flex;
-    height: 100vh;
+    overflow: hidden;
 }
 
 .chat-sidebar {
-    width: 25%;
+    width: 250px;  /* Default sidebar width */
     background-color: #f1faee;
     border-right: 1px solid #ccc;
     padding: 15px;
-    
+    transition: width 0.3s ease;
 }
 
-.chat-sidebar h2 {
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #000000;
+.chat-sidebar.collapsed {
+    width: 50px;  /* Collapsed sidebar width */
+}
+
+.chat-sidebar.collapsed .sidebar-title,
+.chat-sidebar.collapsed .chat-list {
+    display: none;  /* Hide usernames when collapsed */
+}
+
+.hamburger-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1d3557;
+    margin-bottom: 10px;
+    display: block;  /* Ensure the hamburger is always visible */
 }
 
 .chat-list {
+    padding: 10px;  
     padding-top: 5px;
     margin-top: 10px;
-    flex-wrap: wrap;
-    flex-direction: column;   /* Align items vertically */
-    gap: 10px;   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    background-color: #f1faee;
+    transition: width 0.3s ease;  /* Smooth transition for resizing */
+    max-height: 100vh;
 }
 
 .chat-item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;                /* Space between image and text */
-    width: 100%;              /* Make each item take full width */
-    max-width: 200px; 
+    gap: 10px;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    background: white;
+    background-color: #ffffff;
     border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    min-height: 70px;
+}
+
+.chat-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-item p {
+    margin: 0;
+    text-align: left;
 }
 
 .chat-item:hover {
     background-color: #ddd;
 }
 
-/* Chat User Image */
-.chat-item img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-/* RIGHT CHAT WINDOW */
 .chat-window {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #f9f9f9;
 }
 
-/* Chat Header */
+.chat-sidebar h2 {
+    display: inline-block;  
+    margin-left: 10px;  
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+}
+
 .chat-header {
     padding: 15px;
     background-color: #1d3557;
@@ -903,88 +1153,134 @@ input::-webkit-textfield-decoration-container {
     background-color: #0056b3;
 }
 
-/* Scrollbar Styling */
 .chat-sidebar, .chat-messages {
     scrollbar-width: thin;
-    scrollbar-color: gray transparent;
+    scrollbar-color: rgb(168, 159, 159) transparent;
 }
 
-/* .chat-sidebar::-webkit-scrollbar,
-.chat-messages::-webkit-scrollbar {
-    width: 6px;
+@media screen and (max-width: 900px) {
+    .chat-sidebar {
+        width: 50px;  
+        overflow: hidden;
+    }
+
+    .chat-sidebar .sidebar-title,
+    .chat-sidebar .chat-list {
+        display: none; 
+    }
+
+    .chat-sidebar.expanded {
+        width: 250px;
+    }
+
+    .chat-sidebar.expanded .sidebar-title,
+    .chat-sidebar.expanded .chat-list {
+        display: block;
+    }
+
+    .chat-list {
+        display: none;
+        flex-direction: column;
+        gap: 20px;  /* Add spacing between chat items */
+        padding-top: 10px; /* Add padding so it's not too close to the top */
+    }
+
+    .chat-sidebar.expanded .chat-list {
+        display: flex;
+    }
+
+    .chat-container {
+        flex-direction: row;
+        height: 100vh; 
+    }
+
+    .chat-window {
+        margin-left: 0;  
+    }
+
+    .chat-sidebar.collapsed .chat-list {
+        display: none;
+    }
 }
 
-.chat-sidebar::-webkit-scrollbar-thumb,
-.chat-messages::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 10px;
-} */
+/* chat messages */
 
-/* Chat Layout */
-.chat-container {
-    display: flex;
-    height: 100vh;  /* Full viewport height */
-}
-
-/* Left Sidebar */
-.chat-list {
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    overflow-y: auto;
-    width: 250px;  /* Set width for the sidebar */
-    background-color: #f1faee;
-    transition: width 0.3s ease;  /* Smooth transition for resizing */
-    max-width: 250px;  /* Prevent sidebar from exceeding width */
-    overflow-y: auto; 
-    max-height: 100vh;
+    gap: 15px; /* Space between messages */
 }
 
-.chat-item {
+.chat-message {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 100%;
+    align-items: flex-start; /* Align items to the top */
+    gap: 10px; /* Space between profile pic and text */
     padding: 10px;
-    background-color: #ffffff;
+    background: #ffffff;
     border-radius: 10px;
-    min-height: 70px; 
+    max-width: 80%; /* Limit width for messages */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.chat-item img {
+.chat-profile-pic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.chat-item p {
-    margin: 0;
-    text-align: left;
-}
-
-/* Chat Window */
-.chat-window {
-    flex: 1;
+.chat-message-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
-@media screen and (max-width: 900px) {
-    /* Collapse the sidebar when screen width is smaller than 768px */
-    .chat-list {
-        width: 0;  
-        overflow: hidden;  /* Prevent content from showing */
-    }
-
-    .chat-window {
-        flex: 1;  
-    }
+.chat-username {
+    font-weight: bold;
+    color: #1d3557;
+    margin-bottom: 5px;
 }
 
+.chat-message-content p {
+    margin: 0;
+    color: #333;
+}
+
+/* user chat page -------------------------------------------------------------------------------------------------------------*/
+
+.chat-header {
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    padding: 10px;
+    background-color: #1d3557;
+    color: white;
+}
+.header-user-info {
+    display: flex;
+    text-align: center;
+    margin-top: 15px; 
+    flex-direction: column;
+    align-items: center;    
+}
+
+.header-profile-pic {
+    margin-top: 20px;;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-username {
+    margin-top: 20px;
+    font-size: 30px;;
+}
 
 /* wishlist page -------------------------------------------------------------------------------------------------------------*/
 
@@ -1392,6 +1688,68 @@ input::-webkit-textfield-decoration-container {
 .product-details h2 {
     font-size:39px;
 }
+
+
+/* games ------------------------------------------------------------------------------------------------------------- */
+
+.gallery {
+    margin: 10px;
+    flex-wrap: wrap;
+    float: left;
+    width: 250px;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: white;
+    text-align: center;
+    overflow: hidden; /* Prevents content overflow */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+div.gallery:hover {
+  border: 3px solid #f6d0d0;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+.description-games {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Reenie Beanie';
+    font-size: 20px;
+    background-color: rgb(233, 248, 253);
+}
+
+#flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Inherits the text color from its parent */
+}
+
+a:hover {
+    text-decoration: none; 
+    color: #445783;       
+}
+
+
+
+/* game1 */
 
 
 /* footer ------------------------------------------------------------------------------------------------------------- */

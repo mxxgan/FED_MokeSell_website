@@ -1,13 +1,16 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <title>Products</title>
+    <title>Document</title>
 </head>
 
 <style>
@@ -40,6 +43,8 @@
         font-weight: 300 700;
         font-size: 26px;
     }
+    
+    
 </style>
 
 <body>
@@ -58,12 +63,10 @@
             <span>| MokeBIZ - a guide to growing your biz-ness with us</span>
         </marquee>
     </div>
-    <!-- navigation bar -->
+
     <div id="scroll-progress"></div>
     <div class="nav-bar-2">
-        <a href="index.html">
-            <button><div class="logo">MokeSell</div></button>
-        </a>
+        <div class="logo">MokeSell</div>
         <div class="search-bar">
             <input type="text" placeholder="Search on MokeSell...">
             <button><img src="" alt="Search"></button>
@@ -75,11 +78,15 @@
         <a href="listingpage.html">
             <button><img src="" alt="SELL"></button>
         </a>
+        
+        <button id="signup-btn">Sign Up</button>
+        <button id="login-btn" class="login-button" onclick="openModal()">Login</button>
 
-        <a href="profilepage.html" id="profile-btn" >
+        <a href="profilepage.html" id="profile-btn" style="display: none;">
             <button>Profile</button>
         </a>
     </div>
+
 
     <div class="nav-bar-3">
         <a href="#">Hobbies & Toys</a>
@@ -93,66 +100,20 @@
         <a href="#">Video Gaming</a>
       </div>
 
-      <div class="product-container">
-        <div class="product-image">
-            <section class="flex-image">
-                <div class="big-image">
-                    <img src="images/svt crochet.jpeg" alt="User 1">
-                </div>
-                <div class="small-image">
-                    <img src="images/h97club on ig.jpeg" alt="Small 1">
-                    <img src="images/SEVENTEEN Crochet Light Stick Cover _ CARAT.jpeg" alt="Small 2">
-                    <img src="images/Cover bong seventeen.jpeg" alt="Small 4">
-                    <img src="images/crochet lightstick.jpeg" alt="Small 5">
-                    <img src="images/crochet 6.jpeg" alt="Small 6">                    
-                    <img src="images/crochet6.jpeg" alt="Small 7">
-                    <img src="images/Seventeen concert day.jpeg" alt="Small 8">
-                    <img src="images/seventeen caratbong lightstick cover, minghao.jpeg" alt="Small 9">
-                    <img src="images/cute crochet lightstick.jpeg" alt="Small 10">
-                    <img src="images/Custom cover lightstick of seventeen for my customer @thejaeny.jpeg" alt="Small 11">
-                    <img src="images/iloveyou_9595 on ig.jpeg" alt="Small 12">
-                    <img src="images/svt crochet.jpeg" alt="Small 13">                
-                </div>
-            </section>
-        </div>
-        <div class="product-desc">
-            <div class="profile-section">
-                <div class="profile-image2">
-                    <img src="images/pfp1.jpg" alt="pfp" class="profile-pic">
-                </div>
-                    <div class = "username2">
-                        <h2>@bboogyuli</h2>
-                    </div>
-                    <button class="product-chat">Chat</button>
-                    <button class="product-chat">Add to Cart</button>
-            </div>
-            <div class="product-details">
-                <h3 class="popularity">Popular!</h3>
-                <h1>Customisable Crochet cover</h1>
-                <h2><strong>S$20</strong></h2>
-                <h3 class="deets">Item Details:</h3>
-                <h4 class="important-details">Condition</h4>
-                <p>Brand New</p>
-                <h4 class="important-details">Category</h4>
-                <p>Hobbies & Collectives</p>
-                <h4 class="important-details">Description</h4>
-                <p>Handmade crochet lightstick covers!</p>
-                <p>price ranges from $10-$40 depending on the design</p>
-                <p>Self Collection at my convenience or courier + $2</p>
-            </div>
-        </div>
-    </div>
+
+
+      
 
 
 
 
-    <footer class="footer">
+      <footer class="footer">
         <div class = "footer-logo">
             <div class = "logo">MokeSell</div>
         </div>
         <div class="social-media-icons">
             <h3>Social Media Icons</h3>
-
+    
         </div>
         <div class="footer-links">
             <div class="footer-aboutus">
@@ -193,12 +154,8 @@
             <p> © 2025 MokeSell - All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-
-
-
-
-</body>
-</html>
-
+    
+        <script src="script.js"></script>
+    
+    </body>
+    </html>

@@ -83,9 +83,8 @@
             <button class="hamburger-btn" id="sidebarToggle">&#9776;</button>
             
             
-            <!-- <h2>Chats</h2> -->
             <div class="chat-list">
-                <div class="chat-item" onclick="redirectToChat()">
+                <div class="chat-item" onclick="updateChat('images/download (5).jpeg', '@tutterrtte')">
                     <img src="images/download (5).jpeg" alt="@tutterrtte">
                     <p>@tutterrtte</p>
                 </div>
@@ -93,11 +92,11 @@
                     <img src="images/angry snoopy.jpeg" alt="@snoopylver1">
                     <p>@snoopylver1</p>
                 </div>
-                <div class="chat-item" onclick="openChat('@cheorrycoups')">
+                <div class="chat-item" onclick="updateChat('images/cherrycoups.jpeg', '@cheorrycoups')">
                     <img src="images/cherrycoups.jpeg" alt="@cheorrycoups">
                     <p>@cheorrycoups</p>
                 </div>
-                <div class="chat-item" onclick="openChat('@deekay')">
+                <div class="chat-item" onclick="updateChat('images/dk pfp.jpeg', '@deekay')">
                     <img src="images/dk pfp.jpeg" alt="@deekay">
                     <p>@deekay</p>
                 </div>
@@ -139,7 +138,12 @@
 
         <div class="chat-window">
             <div class="chat-header">
-                <h2 id="chatUser">Select a chat</h2>
+                <h2>Select a chat</h2>
+            </div>
+        
+            <div class="header-user-info">
+                <img src="images/download (5).jpeg" alt="Profile" class="header-profile-pic" id="headerProfilePic">
+                <span id="chatUser" class="user-username">@tutterrtte</span>
             </div>
         
             <div class="chat-messages" id="chatMessages">
@@ -153,7 +157,7 @@
         </div>
         
         
-    
+       
       <script src="script.js"></script>
 
       <!-- dont remove -->
@@ -163,7 +167,6 @@
 });
 
       </script>
-
 
 </body>
 </html>
