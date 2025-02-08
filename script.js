@@ -92,14 +92,11 @@ function submitSignUp() {
 // const API_URL = "https://login-a8dd.restdb.io/rest/account"; // Replace with your RestDB collection
 //     const API_KEY = "67920f3052b8e1fed15efd5a"; // Replace with your RestDB API key
 
-
 //[STEP 0]: Make sure our document is A-OK
 document.addEventListener('DOMContentLoaded', function () {
     const APIKEY = "67920f3052b8e1fed15efd5a";
-    // document.getElementById("update-contact-container").style.display = "none";
-    // document.getElementById("add-update-msg").style.display = "none";
   
-    //[STEP 1]: Create our submit form listener
+    //[STEP 1]: Create our submit signup form listener
     document.getElementById("submitSignUp").addEventListener("click", function (e) {
       e.preventDefault();
   
@@ -140,6 +137,50 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.log(error));
     });
+
+    // login form submission
+    
+    document.getElementById("submitLogin").addEventListener("click", function(e) {
+        e.preventDefault();  // Prevent form submission from refreshing the page
+
+        let email = document.getElementById("login_email").value;
+        let password = document.getElementById("login_password").value;
+
+        let apiUrl = `https://login-a8dd.restdb.io/rest/account?q={"email":"${email}"}`;
+
+        let settings = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "x-apikey": APIKEY,
+                "Cache-Control": "no-cache"
+            }
+        };
+
+        // Fetch user data
+        fetch(apiUrl, settings)
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response data:", data);
+
+                if (data.length === 0) {
+                    alert("User not found!");
+                    return;
+                }
+
+                let user = data[0]; // Assuming email is unique and we get one match
+
+                if (user.password === password) {
+                    alert("Login successful!");
+                    window.location.href = "loggedin.html"; // Redirect
+                } else {
+                    alert("Incorrect password.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);  // Log any errors from the fetch
+            });
+    });   
   });
   
 // // chat page -------------------------------------------------------------------------------------------------
