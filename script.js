@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let user = data[0]; // Assuming email is unique and we get one match
 
                 if (user.password === password) {
+                    sessionStorage.setItem('currentUserUsername', user.username);
                     document.getElementById("submitLogin").disabled = true;
                     document.getElementById("loginForm").reset();
                     alert("Login successful!");
@@ -137,6 +138,59 @@ document.addEventListener('DOMContentLoaded', function () {
             handleLogin();
         }
     });
+
+
+    // print out username
+    fetchUsername();
+
+    function fetchUsername() {
+        // Get the current user's email from localStorage
+        const currentUserUsername = sessionStorage.getItem('currentUserUsername');
+        
+        if (!currentUserEmail) {
+            console.error('No user is logged in');
+            return;
+        }
+
+        const apiUrl = `https://login-a8dd.restdb.io/rest/account?q={"username":"${currentUserUsername}"}`;
+
+        fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                'x-apikey': APIKEY,
+                'cache-control': 'no-cache'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                const user = data[0];
+                if (user.username === 'bboogyuli' && user.email === 'bboogyuli@gmail.com') {
+                    window.location.href = 'loggedin.html'; 
+                } else {
+                    window.location.href = 'signup_loggedin.html'; 
+                }
+            } else {
+                console.error('No user found with the provided email');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    // generate user pfp
+    fetch('https://randomuser.me/api/')
+    .then(
+      function(response) {
+        return response.json();
+      }
+    )
+    .then(function (data) {
+      const results = data.results[0];
+      console.log(results.name); // to see the debugging information (optional)
+      $("#avatar").attr('src', `${results.picture.medium}`);
+    })
+    .catch(error => console.error('Error:', error));
 });
 
 // prevent accidental modal closing
@@ -269,10 +323,6 @@ function filterProducts(category) {
         }
     });
 }
-
-// help page ---------------------------------------------------------------------------------------------------------------
-
-
 
 
 
