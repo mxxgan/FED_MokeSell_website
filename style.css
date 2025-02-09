@@ -45,7 +45,7 @@ svg {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #e3f2f5;
+    background-color: #C1121F;
     padding: 10px 0px;
 }
 
@@ -53,6 +53,7 @@ svg {
     display: flex;
     white-space: nowrap;
     animation: marquee 10s linear infinite;
+    color: white;
 }
 
 .marquee-content span {
