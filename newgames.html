@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Profile Page</title>
+    <title>Games</title>
 </head>
 
 <style>
@@ -40,11 +40,11 @@
         font-weight: 300 700;
         font-size: 26px;
     }
+
+    .description-games {
+        margin-top: 40px;
+    }
     
-    .empty-section {
-    height: 100px; 
-    width: 100%;
-}
     
 </style>
 
@@ -104,10 +104,10 @@
       <section class = "p-section">
         <div class="profile-container">
             <div class="profile-image">
-                <img id="avatar" src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
+                <img src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
             </div>
                 <div class = "username">
-                    <h2 id="user-name"></h2>
+                    <h2>@</h2>
                 </div>
     
                 <!-- reviews and followers Section -->
@@ -135,8 +135,88 @@
         <a href="#">Settings</a>
       </section>
 
+      <div class="description-games">
+        <h1>Welcome to MokeSell's Game Page</h1>
+        <p>Play any game at any time and earn coins to win rewards</p>
+    </div>
 
-      <section class="empty-section"></section>
+
+      <div id="flexbox">
+        <div class="gallery">
+            <a href="member.html">
+            <img src="images/games2.jpeg" alt="scoups" width="500" height="200">
+            <div class="desc">Memory Game</div>
+            </a>
+        </div>
+    
+        <div class="gallery">
+            <img src="images/Little Alchemy.jpeg" alt="jeonghan" width="500" height="200">
+            <div class="desc">Test your Science </div>
+            <div class="desc">Knowledge Game</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/cupid's keychain factory⋆˚｡୨୧.jpeg" alt="joshua" width="600" height="400">
+            <div class="desc">Free coins</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/game29.jpeg" alt="jun" width="600" height="400">
+            <div class="desc">Farm Game</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/Top game assets tagged Sprites.jpeg" alt="hoshi" width="600" height="400">
+            <div class="desc">Cozy Interior Game</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/シロス (@shiros_shin) on X.jpeg" alt="wonwoo" width="600" height="400">
+            <div class="desc">Moonshell island</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/PRESS START.jpeg" alt="woozi" width="600" height="400">
+            <div class="desc">pixel game</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/cupid's keychain factory⋆˚｡୨୧ (1).jpeg" alt="dokyeom" width="600" height="400">
+        <div class="desc">Free coins</div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/download.gif" alt="mingyu" width="600" height="400">
+        <div class="desc">Bomtoon game</div>
+        </div>
+        
+        <div class="gallery">
+            <img src="images/❛ 𝐂𝐎𝐅𝐅𝐄𝐄𝐌𝐋𝐊.jpeg" alt="minghao" width="600" height="400">
+        <div class="desc">Animal Crossing</div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/Aviso de redirecionamento.jpeg" alt="Seungkwan" width="600" height="400">
+        <div class="desc">adventure Island</div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/lets play cherry bullet album cover — cherry bullet.jpeg" alt="Vernon" width="600" height="400">
+        <div class="desc">Cherry Bullet</div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/newgame.jpeg" alt="Dino" width="600" height="400">
+        <div class="desc">Pandorams 2021</div>
+        </div>
+
+        <div class="gallery">
+            <img src="images/games.jpeg" alt="Dino" width="600" height="400">
+        <div class="desc">Create a character and room</div>
+        </div>
+    </div> 
+
+
 
 
 <footer class="footer">
@@ -190,16 +270,6 @@
     </div>
 </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const username = sessionStorage.getItem('currentUserUsername');
-            if (username != 'bboogyuli') {
-                document.getElementById('user-name').textContent = `@ ${username}`;
-            } else {
-                console.error('No username found in sessionStorage');
-            }
-        });
-    </script>
     <script src="script.js"></script>
 
 </body>

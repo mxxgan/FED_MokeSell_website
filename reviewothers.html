@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Follow</title>
+</head>
+
+<style>
+    #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 5px;
+        background-color: #94aacf; /* You can change the color */
+        width: 0; /* Starts at 0% */
+        z-index: 1000;}
+
+    .logo
+    {
+        font-family: "Fredoka", serif;
+        font-size:larger;
+        color: #f1faee;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px; /* Adjust as needed */
+    }
+
+    .title {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 300 700;
+        font-size: 26px;
+    }
+    
+    .follower-pg {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 300 700;
+        font-size: 40px;
+        text-align: center; 
+    }
+
+</style>
+
+<body>
+     <!-- marquee banner -->
+     <div class="marquee-container">
+        <!-- Duplicate content for seamless effect -->
+        <marquee class="marquee-content">
+            <span>| 20% off your first purchase over $70 only from 12JAN - 20JAN</span>
+            <span>| Start the year clean and right | Purchase trending items at 10% this New Years!</span>
+            <span>| Beware of Pokemon Preorder Scams!</span>
+            <span>| MokeBIZ - a guide to growing your biz-ness with us |</span>
+
+            <span>| 20% off your first purchase over $70 only from 12JAN - 20JAN</span>
+            <span>| Start the year clean and right | Purchase trending items at 10% this New Years!</span>
+            <span>| Beware of Pokemon Preorder Scams!</span>
+            <span>| MokeBIZ - a guide to growing your biz-ness with us</span>
+        </marquee>
+    </div>
+
+  <!-- navigation bar -->
+  <div id="scroll-progress"></div>
+  <div class="nav-bar-2">
+      <a href="signup_loggedin.html">
+          <button><div class="logo">MokeSell</div></button>
+      </a>
+      <div class="search-bar">
+          <input type="text" placeholder="Search on MokeSell...">
+          <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
+      </div>
+      <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
+      <a href="newchat.html">
+          <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
+      </a>
+      <a href="newuser.html">
+          <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
+      </a>
+
+      <a href="newuser.html" id="profile-btn" >
+          <button>Profile</button>
+      </a>
+  </div>
+
+
+    <div class="nav-bar-3">
+        <a href="#">Hobbies & Toys</a>
+        <a href="#">Collections</a>
+        <a href="#">Electronics</a>
+        <a href="#">Fashion</a>
+        <a href="#">Luxury</a>
+        <a href="#">Cars</a>
+        <a href="#">Travel</a>
+        <a href="#">Free Items</a>
+        <a href="#">Video Gaming</a>
+      </div>
+
+      <section class = "p-section">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="images/angry snoopy.jpeg" alt="pfp" class="profile-pic">
+            </div>
+                <div class = "username">
+                    <h2>@snoopylver1</h2>
+                </div>
+    
+                <!-- reviews and followers Section -->
+                <div class="profile-information">
+                    <div class="reviews">
+                        <strong>Reviews</strong> 
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="followers">
+                        <strong>Followers</strong> 
+                        <div class="follower-count">100</div>
+                    </div>
+                    <div class="follow-button">
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <a href="followpage.html">Listings</a>
+        <a href="reviewothers.html ">Reviews</a>
+
+      </section>
+
+
+      <div class="review-container">
+
+        
+    
+        <h2 class="review-h2"><strong>Customer Reviews</strong></h2>
+
+        <form class="review-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="review" placeholder="Write your review..." required></textarea>
+            <div class="rating">
+                <label>Rating:</label>
+                <span>⭐</span> <span>⭐</span> <span>⭐</span> <span>⭐</span> <span>⭐</span>
+            </div>
+            <button class="review-btn" type="submit">Submit Review</button>
+        </form>
+
+
+        <div class="reviews-list">
+            <div class="review">
+                <div class="black-space"></div>
+                <p class="reviewerID">@coolwith_u</p>
+                <div class="black-space"></div>
+                <p class="review-comment">super nice and friendly buyer tqsm for the deal and tqsm fr waiting 😆🥹 </p>
+                <div class="black-space"></div>
+                <p class="review-rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="review">
+                <div class="black-space"></div>
+                <p class="reviewerID">@jjoyoung</p>
+                <div class="black-space"></div>
+                <p class="review-comment">buyer are so nice and fast deal for meet up thanks for waiting ^^
+                </p>
+                <div class="black-space"></div>
+                <p class="review-rating">⭐⭐⭐⭐</p>
+            </div>
+        </div>
+        <div class="reviews-list">
+            <div class="review">
+                <div class="black-space"></div>
+                <p class="reviewerID">@themunchy</p>
+                <div class="black-space"></div>
+                <p class="review-comment">friendly and flexible buyer, deal was easy and fuss free. thank you and hope to deal again! ^^
+                </p>
+                <div class="black-space"></div>
+                <p class="review-rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="review">
+                <div class="black-space"></div>
+                <p class="reviewerID">@fluffyunicorn</p>
+                <div class="black-space"></div>
+                <p class="review-comment">amazing, kind and understanding seller</p>
+                <div class="black-space"></div>
+                <p class="review-rating">⭐⭐⭐⭐</p>
+            </div>
+        </div>
+        <div class="reviews-list">
+            <div class="review">
+                <div class="black-space"></div>
+                <p class="reviewerID">@jjkyeoms19</p>
+                <div class="black-space"></div>
+                <p class="review-comment">nice and pleasant deal! buyer was accomodating and easy to work with, hope to deal with you again soon ^-^
+                </p>
+                <div class="black-space"></div>
+                <p class="review-rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="review">
+                <div class="black-space"></div>
+                <p class="reviewerID">@hanniehae1004</p>
+                <div class="black-space"></div>
+                <p class="review-comment">great buyer to deal with! thank you so much :)
+                </p>
+                <div class="black-space"></div>
+                <p class="review-rating">⭐⭐⭐⭐</p>
+            </div>
+        </div>
+      </div>
+
+
+
+
+<footer class="footer">
+    <div class = "footer-logo">
+        <div class = "logo">MokeSell</div>
+    </div>
+    <div class="social-media-icons">
+        <h3>Social Media Icons</h3>
+        <img src="images/icons8-facebook.svg" alt="instagram" class="footer-image">
+        <img src="images/icons8-twitterx.svg" alt="instagram" class="footer-image">
+        <img src="images/icons8-youtube.svg" alt="instagram" class="footer-image">
+        <img src="images/icons8-instagram.svg" alt="instagram" class="footer-image">
+    </div>
+    <div class="footer-links">
+        <div class="footer-aboutus">
+            <h3>About Us</h3>
+            <ul>
+                <li id="about">About</li>
+                <li id="team">Team</li>
+                <li id="blog">Blog</li>
+                <li id="contact us">Contact Us</li>
+                <li id="FAQs">FAQs</li>
+            </ul>
+        </div>
+        <div class="footer-customerSerivce">
+            <h3>Customer Service</h3>
+            <ul>
+                <li id="help centre">Help Center</li>
+                <li id="how to buy">How To Buy </li>
+                <li id="how to sell">How to Sell</li>
+                <li id="payment methods">Payment Methods</li>
+                <li id="coins">MokeSell coins</li>
+            </ul>
+        </div>
+        <div class="Top-Searches">
+            <h3>Top Searches</h3>
+            <ul>
+                <li>Labubu</li>
+                <li>Iphone</li>
+                <li>PS5</li>
+                <li>Popmart</li>
+                <li>Jellycat</li>
+                <li>Ikea</li>
+                <li>Camera</li>
+                <li>Owala</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-section">
+        <p> © 2025 MokeSell - All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.querySelector('.follow-btn').addEventListener('click', function () {
+    const button = this;
+    if (button.textContent === 'Follow') {
+        button.textContent = 'Following';
+        // Optionally, you can add some other style changes or logic for a more dynamic effect.
+    } else {
+        button.textContent = 'Follow';
+    }
+});
+    </script>
+
+</body>
+</html>
