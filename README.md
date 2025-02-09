@@ -44,6 +44,9 @@ Go to the profile page to take a look at all the features.
 Credits:
 We used pinterest, google and google icons for all images and icons, pinterest for layout inspiration and coolors.com for colour inspiration.
 
+Work Distribution:
+Gladys - API (RestDB), Lottie, Log In, Sign Up, Homepage, navigation bar and footer, help page, chat page, profile page 
+Megan - profile page, follow page, listing page, chat page, games page, product page, wishlist page, review page, Lottie
 
 website link :
 https://mxxgan.github.io/FED_MokeSell_website/
