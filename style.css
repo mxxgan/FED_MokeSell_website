@@ -24,7 +24,7 @@ svg {
     top: 0;
     left: 0;
     height: 5px;
-    background-color: #94aacf; /* You can change the color */
+    background-color: #C1121F; 
     width: 0; /* Starts at 0% */
     z-index: 1000;
 }
@@ -45,7 +45,7 @@ svg {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #bfeff0;
+    background-color: #e3f2f5;
     padding: 10px 0px;
 }
 
@@ -246,11 +246,6 @@ input::-webkit-textfield-decoration-container {
     display: none;
 }
 
-/* .login-eye-icon img {
-    color: black;
-    width: 100%;
-} */
-
 .close-button {
     position: absolute;
     left: 90%;
@@ -402,7 +397,7 @@ input::-webkit-textfield-decoration-container {
 {
     display: flex;
     justify-content: space-between;
-    background-color: #bfeff0;
+    background-color: #e3f2f5;
     padding: 10px 20px;
     width: 100%; /* nav bar to fill up the full length */
 }
@@ -546,7 +541,7 @@ input::-webkit-textfield-decoration-container {
     text-align: center;
     width: 200px;
     height: 340px;
-    background-color: #f0f0f0;
+    background-color: #f5eee0;
     overflow: hidden;
     border-radius: 10px;
     padding: 10px;
@@ -603,7 +598,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .product-item:hover {
-    border: 3px solid #f6d0d0;
+    border: 3px solid #023e8a;
 }
 
 .for-you-category {
@@ -612,25 +607,6 @@ input::-webkit-textfield-decoration-container {
     gap: 20px;
     justify-content: center;
 }
-
-/* .product-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 200px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 10px;
-    transition: all 0.3s ease;
-} */
-/* 
-.product-item img {
-    width: 90%;
-    height: auto;
-    border-radius: 10px;
-}
- */
 
  .filtering {
     display: flex;
@@ -649,7 +625,7 @@ input::-webkit-textfield-decoration-container {
 
 .filter-dropdown {
     padding: 10px 15px;
-    background-color: #f6d0d0;
+    background-color: #FFE5EC;
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -659,12 +635,12 @@ input::-webkit-textfield-decoration-container {
 }
 
 .filter-dropdown:hover {
-    background-color: #ffaaaa;
+    background-color: #FFC2D1;
 }
 
 .filter-btn {
     padding: 10px 15px;
-    background-color: #f6d0d0;
+    background-color: #FFE5EC;
     color: black;
     border: none;
     cursor: pointer;
@@ -674,7 +650,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .filter-btn:hover {
-    background-color: #ffaaaa;
+    background-color: #FFC2D1;
 }
 
 @media (min-width: 768px) {
@@ -774,8 +750,8 @@ input::-webkit-textfield-decoration-container {
 
 .info{
     display: flex;
-    justify-content: space-around;
-    background-color: #f1faee;
+    justify-content: space-between;
+    background-color: #e3f2f5;
     padding: 10px 0;
     width: 100%; /* nav bar to fill up the full length */
     flex-wrap: wrap;
@@ -802,7 +778,7 @@ input::-webkit-textfield-decoration-container {
     text-align: center;
     width: 200px;
     height: 430px;
-    background-color: #f0f0f0;
+    background-color: #f5eee0;
     overflow: hidden;
     border-radius: 10px;
     padding: 10px;
@@ -866,7 +842,7 @@ input::-webkit-textfield-decoration-container {
     margin-top: auto;
     padding: 10px 15px;
     font-size: 1rem;
-    background-color: #e63946 ;
+    background-color: #c1121f ;
     color: white;
     border: none;
     border-radius: 5px;
@@ -876,7 +852,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .bump-button:hover {
-    background-color: #0056b3;
+    background-color: #780000;
 }
 
 .item {
@@ -884,7 +860,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .item:hover {
-    border: 3px solid #f6d0d0;
+    border: 3px solid #023e8a;
 }
 
 
@@ -902,8 +878,8 @@ input::-webkit-textfield-decoration-container {
 
 .follow-btn {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: #FFE5EC;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -911,7 +887,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .follow-btn:hover {
-    background-color: #0056b3;
+    background-color: #FFC2D1;
 }
 
 @media screen and (max-width: 768px) {
@@ -954,7 +930,11 @@ input::-webkit-textfield-decoration-container {
     justify-content: center;
     color: rgb(0, 0, 0);
     font-size: 1.5rem; 
-    background-color: #a8dadc;
+    background-color: #f5eee0;
+}
+
+.box1:hover {
+    background-color: #e3d6c9;
 }
 
 .small-photos {
@@ -968,7 +948,7 @@ input::-webkit-textfield-decoration-container {
     width: 300px;
     height: 50px;
     border-radius: 10px;
-    background-color: #a8dadc; /* Background color */
+    background-color: #f5eee0; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -981,7 +961,7 @@ input::-webkit-textfield-decoration-container {
     height: 100%;
     border: none;
     border-radius: 10px;
-    background-color: #a8dadc; 
+    background-color: #f5eee0; 
     font-size: 1rem;
     color: black;
     padding: 10px;
@@ -991,14 +971,14 @@ input::-webkit-textfield-decoration-container {
 }
 
 .small-box select:hover {
-    background-color: #c8c8c8;
+    background-color: #e3d6c9;
 }
 
 .small-box input {
     width: 100%;
     height: 100%;
     border: none;
-    background-color: #a8dadc;
+    background-color: #f5eee0;
     font-size: 1rem;
     color: black;
     padding: 10px;
@@ -1007,7 +987,7 @@ input::-webkit-textfield-decoration-container {
 
 .small-box select,
 .small-box input {
-    background-color: #a8dadc;
+    background-color: #f5eee0;
     font-size: 1rem;
 }
 
@@ -1026,7 +1006,7 @@ input::-webkit-textfield-decoration-container {
     padding: 10px;
     font-size: 1rem;
     resize: none;
-    background-color: #a8dadc; 
+    background-color: #f5eee0; 
     font-family: Arial, Helvetica, sans-serif;
     color: #000000;
 }
@@ -1037,8 +1017,8 @@ input::-webkit-textfield-decoration-container {
 }
 
 .list-now-btn {
-    background-color: #4CAF50; /* Green background */
-    color: white;
+    background-color: #C1121F; 
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -1049,7 +1029,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .list-now-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #780000; 
 }
 
 /* chat page ------------------------------------------------------------------------------------------------------------- */
@@ -1103,7 +1083,7 @@ input::-webkit-textfield-decoration-container {
     flex-direction: column;
     gap: 20px;
     overflow-y: auto;
-    background-color: #f1faee;
+    background-color: #f5eee0;
     transition: width 0.3s ease;  /* Smooth transition for resizing */
     max-height: 100vh;
 }
@@ -1195,19 +1175,19 @@ input::-webkit-textfield-decoration-container {
     margin-left: 10px;
     padding: 10px;
     border: none;
-    background-color: #70b2f9;
+    background-color: #C1121F;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .chat-input button:hover {
-    background-color: #0056b3;
+    background-color: #780000;
 }
 
 .chat-sidebar, .chat-messages {
     scrollbar-width: thin;
-    scrollbar-color: rgb(168, 159, 159) transparent;
+    scrollbar-color: #003049 transparent;
 }
 
 @media screen and (max-width: 900px) {
@@ -1385,7 +1365,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .create-wishlist button {
-    background-color: #e63946; 
+    background-color: #C1121F; 
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -1396,29 +1376,8 @@ input::-webkit-textfield-decoration-container {
 }
 
 .create-wishlist button:hover {
-    background-color: #e0b0b0; 
+    background-color: #780000; 
 }
-
-/* .profile-details h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-} */
-
-/* .profile-info {
-    display: flex;
-    gap: 20px; 
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-info .reviews,
-.profile-info .followers {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .product {
     display: flex;
@@ -1429,7 +1388,7 @@ input::-webkit-textfield-decoration-container {
     text-align: center;
     width: 200px;
     height: 340px;
-    background-color: #f0f0f0;
+    background-color: #f5eee0;
     overflow: hidden;
     border-radius: 10px;
     padding: 10px;
@@ -1500,7 +1459,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .product:hover {
-    border: 3px solid #f6d0d0;
+    border: 3px solid #023e8a;
 }
 
 
@@ -1520,7 +1479,7 @@ input::-webkit-textfield-decoration-container {
     display: flex; 
     align-items: center; 
     margin-bottom: 20px; 
-    justify-content: center; /*added*/
+    justify-content: center; 
 }
 
 .flex-image {
@@ -1539,7 +1498,6 @@ input::-webkit-textfield-decoration-container {
 
 .big-image img {
     width: 400px;
-    /* max-width: 400px; */
     height: 500px;
     border-radius: 5px;
 }
@@ -1568,25 +1526,6 @@ input::-webkit-textfield-decoration-container {
     transition: all 0.3s ease;;
 }
 
-/* .product-desc {
-    width: 55%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    display: flex; 
-    justify-content: center;
-}
-
-.product-details {
-    margin-top:30px;
-    width: 55%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    display: flex; 
-    justify-content: center;
-} */
-
 .profile-section {
     display: flex;
     flex-direction: row; /* Stack elements vertically */
@@ -1595,13 +1534,6 @@ input::-webkit-textfield-decoration-container {
     width: 70%;
     margin-bottom: 20px;
     flex-wrap: wrap;
-    
-    /* display: flex;
-    align-items: center;  
-    margin-bottom: 20px;
-    width:70%;
-    justify-content: flex-start; 
-    margin-bottom: 10px;  */
 }
 
 .product-desc {
@@ -1716,8 +1648,8 @@ input::-webkit-textfield-decoration-container {
 
 .product-chat {
     padding: 8px 16px;
-    background-color: #ff6b6b;
-    color: white;
+    background-color: #FFE5EC;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1726,22 +1658,22 @@ input::-webkit-textfield-decoration-container {
     margin-top: 20px;
 }
 .product-chat:hover {
-    background-color: #e55353;
+    background-color: #FFC2D1;
 }
 
 .popularity {
-    color: red; 
+    color: #C1121F; 
     font-weight:bolder; 
 }
 
 .deets {
-    color: #646465;
+    color: #8f0909;
     font-family: 'Poppins';
     font-style:oblique;
 }
 
 .important-details {
-    color: #969799;
+    color: #780000;
     font-family: 'Poppins';
     font-style: italic;
     font-weight: 400;
@@ -1773,7 +1705,7 @@ input::-webkit-textfield-decoration-container {
     }
 
 div.gallery:hover {
-  border: 3px solid #f6d0d0;
+  border: 3px solid #023e8a;
 }
 
 div.gallery img {
@@ -1821,7 +1753,7 @@ a:hover {
 
 .help-sidebar {
     width: 250px;  
-    background-color: #f1faee;
+    background-color: #f5eee0;
     border-right: 1px solid #ccc;
     padding: 15px;
     transition: width 0.3s ease;
@@ -1856,7 +1788,7 @@ a:hover {
     flex-direction: column;
     gap: 20px;
     overflow-y: auto;
-    background-color: #f1faee;
+    background-color: #f5eee0;
     transition: width 0.3s ease;  /* Smooth transition for resizing */
     max-height: 100vh;
 }
@@ -1936,14 +1868,14 @@ a:hover {
     margin-left: 10px;
     padding: 10px;
     border: none;
-    background-color: #70b2f9;
+    background-color: #C1121F;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .help-input button:hover {
-    background-color: #0056b3;
+    background-color: #780000;
 }
 
 .contact-us {
@@ -2108,5 +2040,5 @@ footer {
     font-size:smaller;
 }
 .footer h3, .footer p, .footer ul li {
-    font-family: "Poppins", sans-serif; /* Ensure all text elements use Poppins */
+    font-family: "Poppins", sans-serif; 
 }
