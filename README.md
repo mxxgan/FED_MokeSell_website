@@ -42,7 +42,7 @@ Once logged in, users can explore the website.
 Go to the profile page to take a look at all the features. 
 
 Credits:
-We used pinterest, google and google icons for all images and icons, and pinterest for inspiration. 
+We used pinterest, google and google icons for all images and icons, pinterest for layout inspiration and coolors.com for colour inspiration.
 
 
 
