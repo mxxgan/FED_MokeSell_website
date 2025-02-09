@@ -774,7 +774,7 @@ input::-webkit-textfield-decoration-container {
 
 .info{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #f1faee;
     padding: 10px 0;
     width: 100%; /* nav bar to fill up the full length */

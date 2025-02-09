@@ -6,32 +6,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Listing</title>
+
+    <title>Help page</title>
 </head>
-
-<style>
-    #scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 5px;
-        background-color: #94aacf; /* You can change the color */
-        width: 0; /* Starts at 0% */
-        z-index: 1000;}
-
-    .logo
-    {
-        font-family: "Fredoka", serif;
-        font-size:larger;
-        color: #f1faee;
-    }
-
-    body {
-        font-family: "Poppins", sans-serif;
-        font-size: 16px; /* Adjust as needed */
-    }
-    
-</style>
 
 <body>
     <!-- marquee banner -->
@@ -52,7 +29,7 @@
     <!-- navigation bar -->
     <div id="scroll-progress"></div>
     <div class="nav-bar-2">
-        <a href="loggedin.html">
+        <a href="signup_loggedin.html">
             <button><div class="logo">MokeSell</div></button>
         </a>
         <div class="search-bar">
@@ -60,18 +37,17 @@
             <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
         </div>
         <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
-        <a href="chat.html">
+        <a href="newchat.html">
             <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
         </a>
         <a href="listingpage.html">
             <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
         </a>
 
-        <a href="profilepage.html" id="profile-btn" >
+        <a href="newuser.html" id="profile-btn" >
             <button>Profile</button>
         </a>
     </div>
-
 
     <div class="nav-bar-3">
         <a href="#">Hobbies & Toys</a>
@@ -83,80 +59,51 @@
         <a href="#">Travel</a>
         <a href="#">Free Items</a>
         <a href="#">Video Gaming</a>
-      </div>
+    </div>
 
-      <section class = "p-section">
-        <div class="profile-container">
-            <div class="profile-image">
-                <img src="images/pfp1.jpg" alt="pfp" class="profile-pic">
-            </div>
-                <div class = "username">
-                    <h2>@bboogyuli</h2>
-                </div>
-    
-                <!-- reviews and followers Section -->
-                <div class="profile-information">
-                    <div class="reviews">
-                        <strong>Reviews</strong> 
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                    </div>
-                    <div class="followers">
-                        <strong>Followers</strong> 
-                        <div class="follower-count">200</div>
-                    </div>
-                </div>
-        </div>
-      </section>
-
-      
-      <section class="info">
-        <a href="profilepage.html">Listings</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="#">Coins</a>
-        <a href="wishlist.html">Wishlist</a>
-        <a href="">Likes</a>
-        <a href="games.html">Games</a>
-        <a href="#">Settings</a>
-      </section>
-
-      <section class="photos">
-        <div class="box1 photos-box">+ ADD PHOTOS</div>
-
-        <div class="small-photos">
-            <div class="small-photos">
-                <div class="small-box">
-                    <select>
-                        <option value="" disabled selected>Select Category</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="fashion">Fashion</option>
-                        <option value="home">Home & Living</option>
-                    </select>
-                </div>
+    <div class="help-container">
+        <!-- Sidebar Section -->
+        <div class="help-sidebar">
+            <h2>FAQs</h2>
             
-        
-                <div class="small-box">
-                    <select>
-                        <option value="" disabled selected>Select Condition</option>
-                        <option value="new">New</option>
-                        <option value="used">Used</option>
-                        <option value="refurbished">Refurbished</option>
-                    </select>
+            <div class="help-list">
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>Can I get a refund if a deal goes wrong?</p>
                 </div>
-
-                <div class="small-box">
-                    <input type="number" id="price" placeholder="Indicate Price">
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>What should I do if a buyer is unresponsive?</p>
                 </div>
-
-                <div class="details-box">
-                    <textarea id="details" placeholder="Enter item details "></textarea>
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>How do I handle payments from buyers?</p>
                 </div>
-       
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>How do MokeSell coins work?</p>
+                </div>
+                <div class="contact-us">
+                    <img src="images/contact-icon.png" alt="Contact Us">
+                    <p>Contact Us: 91468234</p>
+                </div>
+            </div>
         </div>
-        <button class="list-now-btn">List Now!</button>
-      
-      </section>
+    
+        <!-- Help Window Section -->
+        <div class="help-window">
+            <div class="help-header">
+                <h2 id="helpTitle">AI Assistant</h2>
+            </div>
+    
+            <div class="help-content" id="helpContent">
+                <p class="default-message">Ask me anything!</p>
+            </div>
+    
+            <div class="help-input">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button onclick="submitQuestion()">Send</button>
+            </div>
+        </div>
+    </div>
 
-      <footer class="footer">
+    <footer class="footer">
         <div class = "footer-logo">
             <div class = "logo">MokeSell</div>
         </div>
@@ -181,9 +128,7 @@
             <div class="footer-customerSerivce">
                 <h3>Customer Service</h3>
                 <ul>
-                    <a href="helppage.html">
-                        <li id="help centre">Help Center</li>
-                    </a>
+                    <li id="help centre">Help Center</li>
                     <li id="how to buy">How To Buy </li>
                     <li id="how to sell">How to Sell</li>
                     <li id="payment methods">Payment Methods</li>
@@ -208,10 +153,8 @@
             <p> © 2025 MokeSell - All rights reserved.</p>
         </div>
     </footer>
-      
 
-
-      <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
