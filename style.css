@@ -1069,6 +1069,7 @@ input::-webkit-textfield-decoration-container {
 
 .chat-sidebar {
     width: 250px;  /* Default sidebar width */
+    height: 90vh;
     background-color: #f1faee;
     border-right: 1px solid #ccc;
     padding: 15px;
@@ -1483,6 +1484,7 @@ input::-webkit-textfield-decoration-container {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     max-height: 500px;
 }
@@ -1508,6 +1510,7 @@ input::-webkit-textfield-decoration-container {
 .product-container {
     margin-top: 50px;
     margin-left:70px;
+    margin-bottom: 50px;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -1822,6 +1825,9 @@ a:hover {
     border-right: 1px solid #ccc;
     padding: 15px;
     transition: width 0.3s ease;
+}
+.help-container .help-sidebar {
+    height: 85vh;
 }
 
 /* .help-sidebar.collapsed {
