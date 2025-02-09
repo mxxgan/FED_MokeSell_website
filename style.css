@@ -1449,6 +1449,8 @@ input::-webkit-textfield-decoration-container {
     font-stretch: 100%;
     font-size: 1.2rem !important;
     line-height: 0.7 !important;
+    text-align: center;
+    align-items: center;
 }
 
 .product img {
@@ -1487,6 +1489,8 @@ input::-webkit-textfield-decoration-container {
 .product:hover {
     border: 3px solid #f6d0d0;
 }
+
+
 
 /* product page ---------------------------------------------------------------------------------- */
 
