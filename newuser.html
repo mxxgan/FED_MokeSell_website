@@ -68,7 +68,7 @@
     <!-- navigation bar -->
     <div id="scroll-progress"></div>
     <div class="nav-bar-2">
-        <a href="signup_loggedin.html">
+        <a href="loggedin.html">
             <button><div class="logo">MokeSell</div></button>
         </a>
         <div class="search-bar">
@@ -79,7 +79,7 @@
         <a href="newchat.html">
             <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
         </a>
-        <a href="newuser.html">
+        <a href="listingpage.html">
             <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
         </a>
 
@@ -107,18 +107,24 @@
                 <img id="avatar" src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
             </div>
                 <div class = "username">
-                    <h2 id="user-name"></h2>
+                    <h2 id="user-name">@ username</h2>
                 </div>
     
                 <!-- reviews and followers Section -->
                 <div class="profile-information">
                     <div class="reviews">
                         <strong>Reviews</strong> 
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars">
+                            <img src="images/blank-star-icon.png" alt="blank-star" class="blank-star" width="20px" height="auto">
+                            <img src="images/blank-star-icon.png" alt="blank-star" class="blank-star" width="20px" height="auto">
+                            <img src="images/blank-star-icon.png" alt="blank-star" class="blank-star" width="20px" height="auto">
+                            <img src="images/blank-star-icon.png" alt="blank-star" class="blank-star" width="20px" height="auto">
+                            <img src="images/blank-star-icon.png" alt="blank-star" class="blank-star" width="20px" height="auto">
+                        </div>
                     </div>
                     <div class="followers">
                         <strong>Followers</strong> 
-                        <div class="follower-count">200</div>
+                        <div class="follower-count">0</div>
                     </div>
                 </div>
         </div>
@@ -127,11 +133,11 @@
 
       <section class="info">
         <a href="newuser.html">Listings</a>
-        <a href="#">Reviews</a>
+        <a href="reviews.html">Reviews</a>
         <a href="#">Coins</a>
         <a href="newwishlist.html">Wishlist</a>
         <a href="">Likes</a>
-        <a href="newgames.html">Games</a>
+        <a href="games.html">Games</a>
         <a href="#">Settings</a>
       </section>
 
@@ -190,17 +196,61 @@
     </div>
 </footer>
 
+    <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const username = sessionStorage.getItem('currentUserUsername');
-            if (username != 'bboogyuli') {
-                document.getElementById('user-name').textContent = `@ ${username}`;
-            } else {
-                console.error('No username found in sessionStorage');
+            const APIKEY = "67920f3052b8e1fed15efd5a";
+
+            function fetchUsername() {
+                console.log('fetchUsername function called'); // Debugging line
+                const currentUserUsername = sessionStorage.getItem('currentUserUsername');
+                console.log('Retrieved username:', currentUserUsername); // Debugging line
+                
+                if (!currentUserUsername) {
+                    console.error('No user is logged in');
+                    return;
+                }
+
+                const apiUrl = `https://login-a8dd.restdb.io/rest/account?q={"username":"${currentUserUsername}"}`;
+
+                fetch(apiUrl, {
+                    method: 'GET',
+                    headers: {
+                        'content-type': 'application/json',
+                        'x-apikey': APIKEY,
+                        'cache-control': 'no-cache'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        const user = data[0];
+                        document.getElementById('user-name').textContent = `@ ${user.username}`;
+                    } else {
+                        console.error('No user found with the provided username');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
             }
+
+            // Call fetchUsername to print out username
+            fetchUsername();
+
+            // Generate user profile picture
+            fetch('https://randomuser.me/api/')
+            .then(
+            function(response) {
+                return response.json();
+            }
+            )
+            .then(function (data) {
+            const results = data.results[0];
+            console.log(results.name); // to see the debugging information (optional)
+            $("#avatar").attr('src', `${results.picture.medium}`);
+            })
+            .catch(error => console.error('Error:', error));
         });
     </script>
-    <script src="script.js"></script>
 
 </body>
 </html>

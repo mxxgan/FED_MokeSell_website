@@ -57,8 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("submitSignUp").disabled = true;
                 document.getElementById("signUpForm").reset();
                 alert("Sign-up successful!");
-                closeSignUpModal();
-                openLoginModal(); // Automatically open login after signup
+                window.location.href = "signup_loggedin.html"
             })
             .catch(error => console.log(error));
     }
@@ -115,7 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById("submitLogin").disabled = true;
                     document.getElementById("loginForm").reset();
                     alert("Login successful!");
-                    window.location.href = "loggedin.html"; // Redirect
+                    if (user.username === 'bboogyuli') {
+                        window.location.href = "loggedin.html"; // Redirect for bboogyuli
+                    } else {
+                        window.location.href = "signup_loggedin.html"; // Redirect for other users
+                    }
                 } else {
                     alert("Incorrect password.");
                 }
@@ -139,21 +142,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
-    // print out username
-    fetchUsername();
-
+     // Function to fetch and print out username
     function fetchUsername() {
-        // Get the current user's email from localStorage
+        console.log('fetchUsername function called'); // Debugging line
         const currentUserUsername = sessionStorage.getItem('currentUserUsername');
+        console.log('Retrieved username:', currentUserUsername); // Debugging line
         
-        if (!currentUserEmail) {
+        if (!currentUserUsername) {
             console.error('No user is logged in');
             return;
         }
-
+    
         const apiUrl = `https://login-a8dd.restdb.io/rest/account?q={"username":"${currentUserUsername}"}`;
-
+    
         fetch(apiUrl, {
             method: 'GET',
             headers: {
@@ -166,31 +167,14 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             if (data.length > 0) {
                 const user = data[0];
-                if (user.username === 'bboogyuli' && user.email === 'bboogyuli@gmail.com') {
-                    window.location.href = 'loggedin.html'; 
-                } else {
-                    window.location.href = 'signup_loggedin.html'; 
-                }
+                document.getElementById('user-name').textContent = `@ ${user.username}`;
             } else {
-                console.error('No user found with the provided email');
+                console.error('No user found with the provided username');
             }
         })
         .catch(error => console.error('Error:', error));
     }
-
-    // generate user pfp
-    fetch('https://randomuser.me/api/')
-    .then(
-      function(response) {
-        return response.json();
-      }
-    )
-    .then(function (data) {
-      const results = data.results[0];
-      console.log(results.name); // to see the debugging information (optional)
-      $("#avatar").attr('src', `${results.picture.medium}`);
-    })
-    .catch(error => console.error('Error:', error));
+    fetchUsername();
 });
 
 // prevent accidental modal closing
@@ -228,6 +212,11 @@ function togglePassword(inputId, eyeIconId) {
         eyeIcon.src = "images/eye-closed-icon.png";
     }
 }
+
+// print out username
+console.log('script.js loaded'); // Debugging line
+
+
   
 // // chat page -------------------------------------------------------------------------------------------------
 // let currentChat = "";
