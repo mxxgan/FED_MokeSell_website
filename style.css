@@ -35,6 +35,11 @@ svg {
 }
 
 
+.space {
+    height: 300px; 
+    width: 100%; 
+}
+
 /* navigation bars ----------------------------------------------------------------------------- */
 .marquee-container {
     width: 100%;
