@@ -1107,6 +1107,10 @@ input::-webkit-textfield-decoration-container {
     max-height: 100vh;
 }
 
+.chat-list h4 {
+    color:rgb(43, 71, 148);
+}
+
 .chat-item {
     display: flex;
     align-items: center;
@@ -1327,6 +1331,13 @@ input::-webkit-textfield-decoration-container {
 .user-username {
     margin-top: 20px;
     font-size: 30px;;
+}
+
+.new-chat-container {
+    display: flex;
+}
+.new-chat-container .chat-sidebar {
+    height: 85vh;
 }
 
 /* wishlist page -------------------------------------------------------------------------------------------------------------*/

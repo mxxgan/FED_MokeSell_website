@@ -107,7 +107,7 @@
                 <img src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
             </div>
                 <div class = "username">
-                    <h2>@</h2>
+                    <h2 id="user-name">@ username</h2>
                 </div>
     
                 <!-- reviews and followers Section -->
@@ -271,6 +271,60 @@
 </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const APIKEY = "67920f3052b8e1fed15efd5a";
+
+            function fetchUsername() {
+                console.log('fetchUsername function called'); // Debugging line
+                const currentUserUsername = sessionStorage.getItem('currentUserUsername');
+                console.log('Retrieved username:', currentUserUsername); // Debugging line
+                
+                if (!currentUserUsername) {
+                    console.error('No user is logged in');
+                    return;
+                }
+
+                const apiUrl = `https://login-a8dd.restdb.io/rest/account?q={"username":"${currentUserUsername}"}`;
+
+                fetch(apiUrl, {
+                    method: 'GET',
+                    headers: {
+                        'content-type': 'application/json',
+                        'x-apikey': APIKEY,
+                        'cache-control': 'no-cache'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        const user = data[0];
+                        document.getElementById('user-name').textContent = `@ ${user.username}`;
+                    } else {
+                        console.error('No user found with the provided username');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+
+            // Call fetchUsername to print out username
+            fetchUsername();
+
+            // Generate user profile picture
+            fetch('https://randomuser.me/api/')
+            .then(
+            function(response) {
+                return response.json();
+            }
+            )
+            .then(function (data) {
+            const results = data.results[0];
+            console.log(results.name); // to see the debugging information (optional)
+            $("#avatar").attr('src', `${results.picture.medium}`);
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 
 </body>
 </html>
