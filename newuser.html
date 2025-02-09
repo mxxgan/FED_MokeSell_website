@@ -134,10 +134,10 @@
       <section class = "p-section">
         <div class="profile-container">
             <div class="profile-image">
-                <img src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
+                <img id="avatar" src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
             </div>
                 <div class = "username">
-                    <h2>@</h2>
+                    <h2 id="user-name"></h2>
                 </div>
     
                 <!-- reviews and followers Section -->
@@ -225,6 +225,16 @@
     </div>
 </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = sessionStorage.getItem('currentUserUsername');
+            if (username != 'bboogyuli') {
+                document.getElementById('user-name').textContent = `@ ${username}`;
+            } else {
+                console.error('No username found in sessionStorage');
+            }
+        });
+    </script>
     <script src="script.js"></script>
 
 </body>
