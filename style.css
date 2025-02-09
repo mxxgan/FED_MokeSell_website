@@ -66,10 +66,10 @@ svg {
     justify-content: space-between;
     margin: 0;
     width: 30%;
-    border-radius: 25px; /* Rounded corners */
+    border-radius: 25px; 
     background-color: rgb(229, 226, 226);
     padding: 5px 10px;
-    border: 2px solid #ccc; /* Light border */
+    border: 2px solid #ccc; 
 }
 .search-bar input {
     outline: none;
@@ -86,10 +86,10 @@ svg {
         justify-content: space-between;
         margin: 0;
         width: 30%;
-        border-radius: 25px; /* Rounded corners */
+        border-radius: 25px; 
         background-color: rgb(229, 226, 226);
         padding: 5px 10px;
-        border: 2px solid #ccc; /* Light border */
+        border: 2px solid #ccc; 
     }
     .search-bar input {
         width: 40%;
@@ -131,7 +131,7 @@ svg {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Transparent Black Background */
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 /* Modal Content Box */
@@ -356,11 +356,6 @@ input::-webkit-textfield-decoration-container {
     font-size: 18px;
 }
 
-/* .eye-icon img {
-    color: black;
-    width: 100%;
-} */
-
 .close-button {
     position: absolute;
     left: 90%;
@@ -459,7 +454,7 @@ input::-webkit-textfield-decoration-container {
 
 @media (max-width: 768px) {
     .advertisement {
-        flex-direction: column; /* Stacks the ads vertically */
+        flex-direction: column; /* Stacks vertically */
         align-items: center; /* Centers the items */
     }
 }
@@ -507,7 +502,6 @@ input::-webkit-textfield-decoration-container {
     display: flex; 
     overflow-x: auto; 
     flex-direction: column;
-    /* white-space: nowrap;  */
     width: 100%; 
     padding: 10px;
 }
@@ -733,7 +727,7 @@ input::-webkit-textfield-decoration-container {
 
 @media screen and (max-width: 768px) {
     .profile-container {
-        flex-direction: column; /* Stack items on smaller screens */
+        flex-direction: column; /* stacks items on smaller screens */
         align-items: center;
         width: 100%;
         gap: 15px;
@@ -803,7 +797,7 @@ input::-webkit-textfield-decoration-container {
 }
 
 .item-title {
-    font-family: "Fredoka", sans-serif !important;
+    font-family: "Fredoka", sans-serif !important; /* Use !important so that it won't get overriden */
     font-style:oblique;
     font-weight:600;
     font-stretch: 100%;
@@ -830,7 +824,6 @@ input::-webkit-textfield-decoration-container {
     margin-bottom: 20px;
     margin-top: 10px;
     scrollbar-width: none; /* Hides scrollbar in Firefox */
-    /* -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer/Edge */
 }
 
 .item p {
@@ -895,7 +888,7 @@ input::-webkit-textfield-decoration-container {
     .follow-button {
         margin-top: 15px;  /* Space between profile info and the follow button */
         justify-content: center; /* Ensure button is centered in the container */
-        width: 100%; /* Make the container take up full width */
+        width: 100%; 
     }
 
     .follow-btn {
@@ -1289,7 +1282,7 @@ input::-webkit-textfield-decoration-container {
 
 .chat-header {
     display: flex;
-    justify-content: center;  /* Center content horizontally */
+    justify-content: center;  
     padding: 10px;
     background-color: #1d3557;
     color: white;

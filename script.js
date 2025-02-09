@@ -218,8 +218,7 @@ console.log('script.js loaded'); // Debugging line
 
 
   
-// // chat page -------------------------------------------------------------------------------------------------
-// let currentChat = "";
+// chat page -------------------------------------------------------------------------------------------------
 
 // Function to open a chat
 function openChat(user) {
@@ -296,12 +295,11 @@ dropdowns.forEach(dropdown => {
     });
 });
 
-// Handle "All" button click
 allButton.addEventListener('click', function () {
     filterProducts('all');
 });
 
-// Function to filter products based on selected category
+// Filter products based on category
 function filterProducts(category) {
     products.forEach(product => {
         let productCategory = product.getAttribute('data-category');
