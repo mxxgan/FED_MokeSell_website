@@ -8,6 +8,7 @@
 body {
     font-family: "Poppins", sans-serif;
     font-size: 16px; /* Adjust as needed */
+    margin-bottom: 0;
 }
 svg {
     display: block; /* Prevent inline behavior */
@@ -34,11 +35,6 @@ svg {
     color: #f1faee;
 }
 
-
-.space {
-    height: 300px; 
-    width: 100%; 
-}
 
 /* navigation bars ----------------------------------------------------------------------------- */
 .marquee-container {
@@ -854,6 +850,7 @@ input::-webkit-textfield-decoration-container {
     white-space: nowrap;
     width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
     margin-top: 10px;
     scrollbar-width: none; /* Hides scrollbar in Firefox */
     /* -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer/Edge */
@@ -1800,6 +1797,184 @@ a:hover {
     color: #445783;       
 }
 
+/* help page ---------------------------------------------------------------------*/
+.help-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.help-sidebar {
+    width: 250px;  
+    background-color: #f1faee;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    transition: width 0.3s ease;
+}
+
+/* .help-sidebar.collapsed {
+    width: 50px;  
+}
+
+.help-sidebar.collapsed .help-list {
+    display: none;  
+} */
+
+/* .hamburger-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1d3557;
+    margin-bottom: 10px;
+    display: block;  
+} */
+
+.help-list {
+    padding: 10px;  
+    padding-top: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    background-color: #f1faee;
+    transition: width 0.3s ease;  /* Smooth transition for resizing */
+    max-height: 100vh;
+}
+
+.help-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    min-height: 70px;
+}
+
+.help-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.help-item p {
+    margin: 0;
+    text-align: left;
+}
+
+.help-item:hover {
+    background-color: #ddd;
+}
+
+.help-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+}
+
+.help-header {
+    padding: 15px;
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+}
+
+/* Help Content */
+.help-content {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.default-message {
+    text-align: center;
+    color: gray;
+}
+
+/* Help Input */
+.help-input {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.help-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.help-input button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #70b2f9;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.help-input button:hover {
+    background-color: #0056b3;
+}
+
+.contact-us {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 70px;
+}
+.contact-us img {
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.contact-us p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+/* User Message */
+.chat-message.user-message {
+    background-color: #e1f5fe;
+    align-self: flex-end;
+}
+
+/* Assistant Message */
+.chat-message.assistant-message {
+    background-color: #f1f8e9;
+    align-self: flex-start;
+}
+
+/* Add some padding and margin for separation */
+.chat-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the message content */
+.chat-message-content p {
+    margin: 0;
+    color: #333;
+}
 
 /* review page -------------------------------------------------------------------------------------- */
 .review-container {
@@ -1888,7 +2063,6 @@ footer {
     font-family: arial, sans-serif;
     font-size: 15px;
     box-sizing: border-box;
-    margin-top: 20px;
 }
 
 .footer-image {

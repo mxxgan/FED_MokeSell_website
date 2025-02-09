@@ -49,7 +49,6 @@
         </a>
     </div>
 
-
     <div class="nav-bar-3">
         <a href="#">Hobbies & Toys</a>
         <a href="#">Collections</a>
@@ -60,11 +59,49 @@
         <a href="#">Travel</a>
         <a href="#">Free Items</a>
         <a href="#">Video Gaming</a>
-      </div>
+    </div>
 
-
-
-
+    <div class="help-container">
+        <!-- Sidebar Section -->
+        <div class="help-sidebar">
+            <h2>FAQs</h2>
+            
+            <div class="help-list">
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>Can I get a refund if a deal goes wrong?</p>
+                </div>
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>What should I do if a buyer is unresponsive?</p>
+                </div>
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>How do I handle payments from buyers?</p>
+                </div>
+                <div class="help-item" onclick="startHelpChat()">
+                    <p>How do MokeSell coins work?</p>
+                </div>
+                <div class="contact-us">
+                    <img src="images/contact-icon.png" alt="Contact Us">
+                    <p>Contact Us: 91468234</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Help Window Section -->
+        <div class="help-window">
+            <div class="help-header">
+                <h2 id="helpTitle">AI Assistant</h2>
+            </div>
+    
+            <div class="help-content" id="helpContent">
+                <p class="default-message">Ask me anything!</p>
+            </div>
+    
+            <div class="help-input">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button onclick="submitQuestion()">Send</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class = "footer-logo">
@@ -115,10 +152,6 @@
     </footer>
 
     <script src="script.js"></script>
-
-
-
-
 </body>
 </html>
 
