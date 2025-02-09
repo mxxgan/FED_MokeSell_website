@@ -42,10 +42,40 @@
     }
     
     .empty-section {
-    height: 100px; 
     width: 100%;
-}
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    }
+
+    .empty-message {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555; 
+    margin-bottom: 10px;
+    }
+
+    .btn-to-list {
+        padding: 10px 20px;
+        background-color: #efac7f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-to-list:hover {
+        background-color: #e65c00; 
+    }
+        
 </style>
 
 <body>
@@ -142,7 +172,12 @@
       </section>
 
 
-      <section class="empty-section"></section>
+      <section class="empty-section">
+        <p class="empty-message">No listings yet</p>
+        <a href="newlisting.html">
+            <button class="btn-to-list">List Now</button>
+        </a>     
+     </section>
 
 
 <footer class="footer">
