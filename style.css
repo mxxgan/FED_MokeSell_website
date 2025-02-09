@@ -35,7 +35,8 @@ svg {
     color: #f1faee;
 }
 
-/* navigation bars */
+
+/* navigation bars ----------------------------------------------------------------------------- */
 .marquee-container {
     width: 100%;
     display: flex;
@@ -1976,8 +1977,78 @@ a:hover {
     color: #333;
 }
 
+/* review page -------------------------------------------------------------------------------------- */
+.review-container {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-/* game1 */
+.review-h2{
+    font-family: "Fredoka", sans-serif !important;
+    font-style:oblique;
+    font-weight:600;
+    font-stretch: 100%;
+    font-size: 2rem !important;
+    line-height: 0.7 !important;
+    margin-top: 20px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.review-form input, .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.rating span {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.review-btn {
+    background-color: #bff5d4;
+    color: rgb(1, 0, 0);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.review-btn:hover {
+    background-color: #7cd19d;
+}
+
+.reviews-list {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.review {
+    background: #fff8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 1rem;
+}
+
 
 
 /* footer ------------------------------------------------------------------------------------------------------------- */
@@ -1994,6 +2065,14 @@ footer {
     font-size: 15px;
     box-sizing: border-box;
 }
+
+.footer-image {
+    width: 20px;
+    height: 40px;
+    object-fit: contain; /* ensure image stays in the ratio*/
+    transition: transform 0.3s ease;
+}
+
 
 .footer-links
 {
