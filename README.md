@@ -48,8 +48,11 @@ Work Distribution:
 Gladys - API (RestDB), Lottie, Log In, Sign Up, Homepage, navigation bar and footer, help page, chat page, profile page 
 Megan - profile page, follow page, listing page, chat page, games page, product page, wishlist page, review page, Lottie
 
-website link :
+website link:
 https://mxxgan.github.io/FED_MokeSell_website/
+
+video link:
+https://drive.google.com/drive/folders/18lRsK_QFIrs9Gnc4Te28j_sd84SZpijn?usp=drive_link
 
 
 
