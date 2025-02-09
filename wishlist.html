@@ -15,8 +15,8 @@
         top: 0;
         left: 0;
         height: 5px;
-        background-color: #94aacf; /* You can change the color */
-        width: 0; /* Starts at 0% */
+        background-color: #94aacf; 
+        width: 0; 
         z-index: 1000;
     }
 
@@ -29,7 +29,7 @@
 
     body {
         font-family: "Poppins", sans-serif;
-        font-size: 16px; /* Adjust as needed */
+        font-size: 16px; 
     }
 
     .title {
@@ -50,12 +50,11 @@
         font-size: 19px ;
         align-items: center;   
     }
-    
 </style>
 
 <body>
-    <!-- marquee banner -->
-    <div class="marquee-container">
+     <!-- marquee banner -->
+     <div class="marquee-container">
         <!-- Duplicate content for seamless effect -->
         <marquee class="marquee-content">
             <span>| 20% off your first purchase over $70 only from 12JAN - 20JAN</span>
@@ -69,7 +68,8 @@
             <span>| MokeBIZ - a guide to growing your biz-ness with us</span>
         </marquee>
     </div>
-    <!-- navigation bar -->
+
+    <!-- main navigation bar -->
     <div id="scroll-progress"></div>
     <div class="nav-bar-2">
         <a href="index.html">
@@ -77,18 +77,14 @@
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Search on MokeSell...">
-            <button><img src="" alt="Search"></button>
+            <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
         </div>
-        <button><img src="" alt="Cart"></button>
-        <a href="chat.html">
-            <button><img src="" alt="Chat"></button>
-        </a>
-        <a href="listingpage.html">
-            <button><img src="" alt="SELL"></button>
-        </a>
+        <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
+        <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
+        <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
         
-        <button id="signup-btn">Sign Up</button>
-        <button id="login-btn" class="login-button" onclick="openModal()">Login</button>
+        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
+        <button id="login-btn" class="login-button" onclick="openLoginModal()">Login</button>
 
         <a href="profilepage.html" id="profile-btn" style="display: none;">
             <button>Profile</button>

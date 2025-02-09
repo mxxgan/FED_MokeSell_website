@@ -41,12 +41,21 @@
         font-size: 26px;
     }
     
-    
+    .follower-pg {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 300 700;
+        font-size: 40px;
+        text-align: center; 
+    }
+
 </style>
 
 <body>
-    <!-- marquee banner -->
-    <div class="marquee-container">
+     <!-- marquee banner -->
+     <div class="marquee-container">
         <!-- Duplicate content for seamless effect -->
         <marquee class="marquee-content">
             <span>| 20% off your first purchase over $70 only from 12JAN - 20JAN</span>
@@ -61,7 +70,7 @@
         </marquee>
     </div>
 
-    <<!-- navigation bar -->
+    <!-- main navigation bar -->
     <div id="scroll-progress"></div>
     <div class="nav-bar-2">
         <a href="index.html">
@@ -69,17 +78,16 @@
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Search on MokeSell...">
-            <button><img src="" alt="Search"></button>
+            <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
         </div>
-        <button><img src="" alt="Cart"></button>
-        <a href="chat.html">
-            <button><img src="" alt="Chat"></button>
-        </a>
-        <a href="listingpage.html">
-            <button><img src="" alt="SELL"></button>
-        </a>
+        <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
+        <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
+        <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
+        
+        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
+        <button id="login-btn" class="login-button" onclick="openLoginModal()">Login</button>
 
-        <a href="profilepage.html" id="profile-btn" >
+        <a href="profilepage.html" id="profile-btn" style="display: none;">
             <button>Profile</button>
         </a>
     </div>
@@ -124,12 +132,12 @@
       </section>
 
       <section class="info">
-        <a href="profilepage.html">Listings</a>
+        <a href="#">Listings</a>
         <a href="#">Reviews</a>
         <a href="#">Coins</a>
-        <a href="wishlist.html">Wishlist</a>
+        <a href="#">Wishlist</a>
         <a href="#">Likes</a>
-        <a href="games.html">Games</a>
+        <a href="#">Games</a>
         <a href="#">Settings</a>
       </section>
 
@@ -239,7 +247,7 @@
      
 
       <div class="title2">
-        <h1><u>HOBBIES & COLLECTIVES</u></h1>
+        <h1 class="follower-pg"><u>HOBBIES & COLLECTIVES</u></h1>
     </div>
 
     <div class="category">
@@ -299,7 +307,7 @@
     </div>
 
     <div class="title2">
-        <h1><u>BEAUTY & PERSONAL CARE</u></h1>
+        <h1 class="follower-pg"><u>BEAUTY & PERSONAL CARE</u></h1>
     </div>
 
     <div class="category">

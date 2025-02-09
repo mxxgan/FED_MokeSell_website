@@ -1421,6 +1421,7 @@ input::-webkit-textfield-decoration-container {
     padding: 10px;
     min-width: 200px;
     max-width: 100%;
+    
 }
 
 .product-desc {
@@ -1430,15 +1431,13 @@ input::-webkit-textfield-decoration-container {
     gap:0px;
     padding:0;
     margin:0;
-    margin-bottom: 22px;
-    margin-top: 7px;
+    margin-top:2px;
 }
 
 .product-desc p {
     margin: 2px 0; 
     font-size: 0.9rem; 
     line-height: 1;
-
 }
 
 .product-title {
