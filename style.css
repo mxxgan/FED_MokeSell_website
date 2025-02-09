@@ -1050,7 +1050,8 @@ input::-webkit-textfield-decoration-container {
 
 .chat-sidebar {
     width: 250px;  /* Default sidebar width */
-    background-color: #f5eee0;
+    height: 90vh;
+    background-color: #f1faee;
     border-right: 1px solid #ccc;
     padding: 15px;
     transition: width 0.3s ease;
@@ -1443,6 +1444,7 @@ input::-webkit-textfield-decoration-container {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     max-height: 500px;
 }
@@ -1468,6 +1470,7 @@ input::-webkit-textfield-decoration-container {
 .product-container {
     margin-top: 50px;
     margin-left:70px;
+    margin-bottom: 50px;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -1756,6 +1759,27 @@ a:hover {
     padding: 15px;
     transition: width 0.3s ease;
 }
+.help-container .help-sidebar {
+    height: 85vh;
+}
+
+/* .help-sidebar.collapsed {
+    width: 50px;  
+}
+
+.help-sidebar.collapsed .help-list {
+    display: none;  
+} */
+
+/* .hamburger-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1d3557;
+    margin-bottom: 10px;
+    display: block;  
+} */
 
 .help-list {
     padding: 10px;  
