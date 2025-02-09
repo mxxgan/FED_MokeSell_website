@@ -50,11 +50,16 @@
         font-size: 19px ;
         align-items: center;   
     }
+
+    .space {
+        height: 100px; 
+        width: 100%;
+    }
 </style>
 
 <body>
      <!-- marquee banner -->
-     <div class="marquee-container">
+    <div class="marquee-container">
         <!-- Duplicate content for seamless effect -->
         <marquee class="marquee-content">
             <span>| 20% off your first purchase over $70 only from 12JAN - 20JAN</span>
@@ -68,28 +73,28 @@
             <span>| MokeBIZ - a guide to growing your biz-ness with us</span>
         </marquee>
     </div>
+   <!-- navigation bar -->
+   <div id="scroll-progress"></div>
+   <div class="nav-bar-2">
+       <a href="loggedin.html">
+           <button><div class="logo">MokeSell</div></button>
+       </a>
+       <div class="search-bar">
+           <input type="text" placeholder="Search on MokeSell...">
+           <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
+       </div>
+       <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
+       <a href="newchat.html">
+           <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
+       </a>
+       <a href="listingpage.html">
+           <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
+       </a>
 
-    <!-- main navigation bar -->
-    <div id="scroll-progress"></div>
-    <div class="nav-bar-2">
-        <a href="index.html">
-            <button><div class="logo">MokeSell</div></button>
-        </a>
-        <div class="search-bar">
-            <input type="text" placeholder="Search on MokeSell...">
-            <button id="search"><img src="images/search-icon.png" alt="Search" width="20px"></button>
-        </div>
-        <button><img src="images/cart-icon.png" alt="Cart" width="30px" height="auto"></button>
-        <button><img src="images/chat-icon.png" alt="Chat" width="30px" height="auto"></button>
-        <button><img src="images/sell-icon.png" alt="SELL" width="30px" height="auto"></button>
-        
-        <button id="signup-btn" class="signup-button" onclick="openSignUpModal()">Sign Up</button>
-        <button id="login-btn" class="login-button" onclick="openLoginModal()">Login</button>
-
-        <a href="profilepage.html" id="profile-btn" style="display: none;">
-            <button>Profile</button>
-        </a>
-    </div>
+       <a href="newuser.html" id="profile-btn" >
+           <button>Profile</button>
+       </a>
+   </div>
 
     <div class="nav-bar-3">
         <a href="#">Hobbies & Toys</a>
@@ -107,10 +112,10 @@
       <section class = "p-section">
         <div class="profile-container">
             <div class="profile-image">
-                <img src="images/pfp1.jpg" alt="pfp" class="profile-pic">
+                <img src="images/ׂ   ( ˶°ㅁ°)   𝓷𝚎𝚠  𝚙𝗈𝘴𝚝 _ᐟ  🎀 ˖  ݁𖥔 ݁ (1).jpg" alt="pfp" class="profile-pic">
             </div>
                 <div class = "username">
-                    <h2>@bboogyuli</h2>
+                    <h2>@</h2>
                 </div>
     
                 <!-- reviews and followers Section -->
@@ -169,7 +174,10 @@
         </div>
         <div class="social-media-icons">
             <h3>Social Media Icons</h3>
-
+            <img src="images/icons8-facebook.svg" alt="instagram" class="footer-image">
+            <img src="images/icons8-twitterx.svg" alt="instagram" class="footer-image">
+            <img src="images/icons8-youtube.svg" alt="instagram" class="footer-image">
+            <img src="images/icons8-instagram.svg" alt="instagram" class="footer-image">
         </div>
         <div class="footer-links">
             <div class="footer-aboutus">

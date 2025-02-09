@@ -1581,6 +1581,7 @@ input::-webkit-textfield-decoration-container {
     width: 70%;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    
     /* display: flex;
     align-items: center;  
     margin-bottom: 20px;
@@ -1608,6 +1609,7 @@ input::-webkit-textfield-decoration-container {
     justify-content: center;
     text-align: start;
     gap: 6.5px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
